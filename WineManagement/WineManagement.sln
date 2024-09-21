@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineManagement", "WineManagement\WineManagement.csproj", "{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{20CEC520-E182-417A-9518-4931A92E37A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CEC520-E182-417A-9518-4931A92E37A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CEC520-E182-417A-9518-4931A92E37A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CEC520-E182-417A-9518-4931A92E37A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CEC520-E182-417A-9518-4931A92E37A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
