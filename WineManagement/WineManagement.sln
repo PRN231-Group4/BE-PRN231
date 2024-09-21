@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineManagement", "WineManagement\WineManagement.csproj", "{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E8DEBAD-E8E7-4254-BB41-A22F487A3903}
+	EndGlobalSection
+EndGlobal
