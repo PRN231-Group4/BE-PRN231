@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wfwG8fXsPzxQXvKwmjMJq4nh+/f6/VaGwugdd+cTdWN0+CL6l+SlvnlLdCLNLL6c0W5tQrNPsk7rMqgAIoi8MA==",
+  "dgSpecHash": "d7nOP0u3HRh8ezJJkFZTvemE9LKerwAE5XHFeeylLVuoHO5lEP2DLh4lr2AK7CrSNTkxs4D56nkh7NinEd79bQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.2\\microsoft.data.sqlclient.5.2.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.2.0\\microsoft.data.sqlclient.sni.runtime.5.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.28\\microsoft.entityframeworkcore.6.0.28.nupkg.sha512",
