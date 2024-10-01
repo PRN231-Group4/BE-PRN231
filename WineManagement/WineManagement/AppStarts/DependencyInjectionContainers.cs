@@ -13,6 +13,11 @@ namespace WineManagement.AppStarts
             // use DI here
             services.AddScoped<IWineRepository, WineRepository>();
             services.AddScoped<IWineService, WineService>();
+            services.AddScoped<IWineBatchRepository, WineBatchRepository>();
+            services.AddScoped<IWineBatchService, WineBatchService>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
 
             // auto mapper
             services.AddAutoMapper(typeof(AutoMapperConfig).Assembly);

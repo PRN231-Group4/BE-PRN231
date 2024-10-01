@@ -10,6 +10,9 @@ namespace WineManagement.AppStarts
         public AutoMapperConfig()
         {
             CreateMap<WineDTO, Wine>().ReverseMap();
+            CreateMap<WineBatchDTO, WineBatch>().ReverseMap();
+            CreateMap<CategoryDTO, Category>().ReverseMap();
+
 
         }
     }
