@@ -10,6 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+
+// Install AutoMapper
+//builder.Services.ConfigureAutoMapper();
+// Install DI and dbcontext
+builder.Services.InstallService(builder.Configuration);
+// Swagger config
+//builder.Services.ConfigureSwaggerServices("SWDProject");
+builder.Services.ConfigureAuthService(builder.Configuration);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

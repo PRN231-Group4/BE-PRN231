@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <Compile Remove="Modal\Respond\**" />
+    <EmbeddedResource Remove="Modal\Respond\**" />
+    <None Remove="Modal\Respond\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modal\Respond\" />
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
