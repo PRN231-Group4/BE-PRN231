@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {}
   },
   "projects": {
-    "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
-        "outputPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -43,11 +43,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -78,43 +73,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
-        "outputPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -136,11 +117,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -187,43 +163,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
         "projectName": "WineManagement",
-        "projectPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
-        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
-        "outputPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\WineManagement\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -239,8 +201,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "E:\\WORKSPACE\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -249,20 +211,33 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.17, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.7.0, )"
             }
           },
           "imports": [
@@ -276,24 +251,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -302,7 +259,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
