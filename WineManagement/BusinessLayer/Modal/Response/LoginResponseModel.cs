@@ -8,6 +8,7 @@ namespace BusinessLayer.Modal.Response
 {
 	public class LoginResponseModel
 	{
+		public string Token { get; set; }
 		public AccountResponseModel Account { get; set; }
 	}
 }

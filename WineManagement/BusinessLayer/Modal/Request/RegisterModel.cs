@@ -9,7 +9,7 @@ namespace BusinessLayer.Modal.Request
 	public class AdminCreateAccountModel
 	{
 		public string Username { get; set; }
-		public string Password { get; set; }
+		//public string Password { get; set; }
 		public int RoleId { get; set; }
 		public bool Status { get; set; }
 

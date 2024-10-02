@@ -9,7 +9,7 @@ namespace BusinessLayer.Modal.Response
 	public class AccountResponseModel
 	{
 		public int AccountId { get; set; }
-		public string UserName { get; set; } = null!;
+		public string Username { get; set; } = null!;
 		public int RoleId { get; set; }
 		public string Status { get; set; }
 

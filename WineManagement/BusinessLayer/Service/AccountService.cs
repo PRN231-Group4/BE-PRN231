@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
+using DataLayer.GenericRepository;
 using DataLayer.Models;
 using DataLayer.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
@@ -62,13 +63,15 @@ namespace BusinessLayer.Service
 		public async Task<Account> GetAccountByUsernameAsync(string username)
 		{
 			// Truy vấn người dùng từ cơ sở dữ liệu theo tên người dùng
-			var account = await _unitOfWork.Repository<Account>()
+			var user = await _unitOfWork.Repository<Account>()
 				.GetAll()
-				.Include(u => u.RoleId)
+				.Include(u => u.Role)
 				.FirstOrDefaultAsync(u => u.Username == username);
 
-			return account;
+			return user;
 		}
+
+		
 
 
 
@@ -84,7 +87,7 @@ namespace BusinessLayer.Service
 			var responseModel = new AccountResponseModel
 			{
 				AccountId = account.AccountId,
-				UserName = account.Username,
+				Username = account.Username,
 				RoleId = account.RoleId,
 				Status = account.Status
 			};

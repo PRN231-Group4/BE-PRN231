@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+0G0obNwpUh3Y3teJzOOzB7Je6ttJ6gTWw7JkaixBzlQ6MG4ayq/1vzvAPliwErYYy/qSlEFvcfhwvF/qmip3A==",
+  "dgSpecHash": "1fSfuArt9iEiiSMd5T/Q4nGoYdnyBBsGY+Fi4PuboINv3qk9F1g69vafJhzPOO1W/nyrszozfB6I+1S2VGFFMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Workspace\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\Dell\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.28\\microsoft.aspnetcore.authentication.jwtbearer.6.0.28.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
