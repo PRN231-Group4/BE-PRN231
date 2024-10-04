@@ -7,12 +7,12 @@ namespace DataLayer.Models
     {
         public Supplier()
         {
-            WineImportRequests = new HashSet<WineImportRequest>();
+            WineRequests = new HashSet<WineRequest>();
         }
 
         public int SupplierId { get; set; }
         public string Name { get; set; } = null!;
 
-        public virtual ICollection<WineImportRequest> WineImportRequests { get; set; }
+        public virtual ICollection<WineRequest> WineRequests { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "masGHVFWgsmU1QHRQed11SFH6a2NnDncqV+O36xIHmGBebsrgDMlSnyjBk4B1fc3uJ8IYcrK3E9yyhAz/IulDw==",
+  "dgSpecHash": "EmjmiDS0Ms9u7DTMZjB537z06wgEcDYk1OgZBWqV/Kt8dQEvFM1KKo/sBr/a49E+bKLHnKURLpodpB6Lk87dUQ==",
   "success": true,
-  "projectFilePath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

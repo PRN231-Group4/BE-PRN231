@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {}
+    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
+        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
+              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
+        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

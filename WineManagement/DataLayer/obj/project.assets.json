@@ -2870,11 +2870,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+      "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\HK8\\PRN_231\\Wine warehouse\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
+      "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
