@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 namespace DataLayer.Models
 {
@@ -23,32 +22,21 @@ namespace DataLayer.Models
         public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
         public virtual DbSet<Wine> Wines { get; set; } = null!;
         public virtual DbSet<WineBatch> WineBatches { get; set; } = null!;
-        public virtual DbSet<WineImportCheck> WineImportChecks { get; set; } = null!;
-        public virtual DbSet<WineImportRequest> WineImportRequests { get; set; } = null!;
+        public virtual DbSet<WineCheck> WineChecks { get; set; } = null!;
+        public virtual DbSet<WineRequest> WineRequests { get; set; } = null!;
         public virtual DbSet<WineStorageLocation> WineStorageLocations { get; set; } = null!;
         public virtual DbSet<WineTransaction> WineTransactions { get; set; } = null!;
 
-        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=LAPTOP-FEOOS2UC;uid=sa;pwd=123;database=WineManagementSystem;TrustServerCertificate=True");
+            }
+        }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			if (!optionsBuilder.IsConfigured)
-			{
-				optionsBuilder.UseSqlServer(GetConnectionString());
-				optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-
-			}
-		}
-
-		private string GetConnectionString()
-		{
-			IConfiguration configuration = new ConfigurationBuilder()
-					.SetBasePath(Directory.GetCurrentDirectory())
-					.AddJsonFile("appsettings.json", true, true).Build();
-			return configuration["ConnectionStrings:DBDefault"];
-		}
-
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
             {
@@ -67,7 +55,7 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Accounts)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__Account__Role_Id__267ABA7A");
+                    .HasConstraintName("FK__Account__Role_Id__48CFD27E");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -122,13 +110,13 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Wines)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Wine__Category_I__2D27B809");
+                    .HasConstraintName("FK__Wine__Category_I__49C3F6B7");
             });
 
             modelBuilder.Entity<WineBatch>(entity =>
             {
                 entity.HasKey(e => e.BatchId)
-                    .HasName("PK__WineBatc__28E47C73F89C0FAE");
+                    .HasName("PK__WineBatc__28E47C73AE782DE1");
 
                 entity.ToTable("WineBatch");
 
@@ -147,20 +135,20 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Request)
                     .WithMany(p => p.WineBatches)
                     .HasForeignKey(d => d.RequestId)
-                    .HasConstraintName("FK__WineBatch__Reque__34C8D9D1");
+                    .HasConstraintName("FK__WineBatch__Reque__4AB81AF0");
 
                 entity.HasOne(d => d.Wine)
                     .WithMany(p => p.WineBatches)
                     .HasForeignKey(d => d.WineId)
-                    .HasConstraintName("FK__WineBatch__Wine___33D4B598");
+                    .HasConstraintName("FK__WineBatch__Wine___4BAC3F29");
             });
 
-            modelBuilder.Entity<WineImportCheck>(entity =>
+            modelBuilder.Entity<WineCheck>(entity =>
             {
                 entity.HasKey(e => e.CheckId)
-                    .HasName("PK__WineImpo__7063BF739B460838");
+                    .HasName("PK__WineChec__7063BF73C5C40E08");
 
-                entity.ToTable("WineImportCheck");
+                entity.ToTable("WineCheck");
 
                 entity.Property(e => e.CheckId).HasColumnName("Check_Id");
 
@@ -183,27 +171,27 @@ namespace DataLayer.Models
                 entity.Property(e => e.WineId).HasColumnName("Wine_Id");
 
                 entity.HasOne(d => d.Batch)
-                    .WithMany(p => p.WineImportChecks)
+                    .WithMany(p => p.WineChecks)
                     .HasForeignKey(d => d.BatchId)
-                    .HasConstraintName("FK__WineImpor__Batch__3F466844");
+                    .HasConstraintName("FK__WineCheck__Batch__4CA06362");
 
                 entity.HasOne(d => d.Request)
-                    .WithMany(p => p.WineImportChecks)
+                    .WithMany(p => p.WineChecks)
                     .HasForeignKey(d => d.RequestId)
-                    .HasConstraintName("FK__WineImpor__Reque__3E52440B");
+                    .HasConstraintName("FK__WineCheck__Reque__4D94879B");
 
                 entity.HasOne(d => d.Wine)
-                    .WithMany(p => p.WineImportChecks)
+                    .WithMany(p => p.WineChecks)
                     .HasForeignKey(d => d.WineId)
-                    .HasConstraintName("FK__WineImpor__Wine___403A8C7D");
+                    .HasConstraintName("FK__WineCheck__Wine___4E88ABD4");
             });
 
-            modelBuilder.Entity<WineImportRequest>(entity =>
+            modelBuilder.Entity<WineRequest>(entity =>
             {
                 entity.HasKey(e => e.RequestId)
-                    .HasName("PK__WineImpo__E9C5B37369DF6DBB");
+                    .HasName("PK__WineRequ__E9C5B3736A72AB8E");
 
-                entity.ToTable("WineImportRequest");
+                entity.ToTable("WineRequest");
 
                 entity.Property(e => e.RequestId).HasColumnName("Request_Id");
 
@@ -220,20 +208,15 @@ namespace DataLayer.Models
                 entity.Property(e => e.WineId).HasColumnName("Wine_Id");
 
                 entity.HasOne(d => d.Supplier)
-                    .WithMany(p => p.WineImportRequests)
+                    .WithMany(p => p.WineRequests)
                     .HasForeignKey(d => d.SupplierId)
-                    .HasConstraintName("FK__WineImpor__Suppl__300424B4");
-
-                entity.HasOne(d => d.Wine)
-                    .WithMany(p => p.WineImportRequests)
-                    .HasForeignKey(d => d.WineId)
-                    .HasConstraintName("FK__WineImpor__Wine___30F848ED");
+                    .HasConstraintName("FK_WineRequest_Supplier");
             });
 
             modelBuilder.Entity<WineStorageLocation>(entity =>
             {
                 entity.HasKey(e => e.LocationId)
-                    .HasName("PK__WineStor__D2BA00E22F2DA2F2");
+                    .HasName("PK__WineStor__D2BA00E208FA44A3");
 
                 entity.ToTable("WineStorageLocation");
 
@@ -251,7 +234,7 @@ namespace DataLayer.Models
             modelBuilder.Entity<WineTransaction>(entity =>
             {
                 entity.HasKey(e => e.TransactionId)
-                    .HasName("PK__WineTran__9A8D5605092A147D");
+                    .HasName("PK__WineTran__9A8D5605F7CE83B8");
 
                 entity.ToTable("WineTransaction");
 
@@ -278,17 +261,17 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Batch)
                     .WithMany(p => p.WineTransactions)
                     .HasForeignKey(d => d.BatchId)
-                    .HasConstraintName("FK__WineTrans__Batch__398D8EEE");
+                    .HasConstraintName("FK__WineTrans__Batch__5070F446");
 
                 entity.HasOne(d => d.Location)
                     .WithMany(p => p.WineTransactions)
                     .HasForeignKey(d => d.LocationId)
-                    .HasConstraintName("FK__WineTrans__Locat__3B75D760");
+                    .HasConstraintName("FK__WineTrans__Locat__5165187F");
 
                 entity.HasOne(d => d.Wine)
                     .WithMany(p => p.WineTransactions)
                     .HasForeignKey(d => d.WineId)
-                    .HasConstraintName("FK__WineTrans__Wine___3A81B327");
+                    .HasConstraintName("FK__WineTrans__Wine___52593CB8");
             });
 
             OnModelCreatingPartial(modelBuilder);
