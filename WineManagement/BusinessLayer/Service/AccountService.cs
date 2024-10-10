@@ -88,7 +88,7 @@ namespace BusinessLayer.Service
 			{
 				AccountId = account.AccountId,
 				Username = account.Username,
-				RoleId = account.RoleId,
+				RoleId = (int)account.RoleId,
 				Status = account.Status
 			};
 
