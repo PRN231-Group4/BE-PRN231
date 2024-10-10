@@ -13,6 +13,7 @@ namespace WineManagement.AppStarts
             CreateMap<WineBatchDTO, WineBatch>().ReverseMap();
             CreateMap<CategoryDTO, Category>().ReverseMap();
             CreateMap<RoleDTO, Role>().ReverseMap();
+            CreateMap<SupplierDTO, Supplier>().ReverseMap();
 
 
         }

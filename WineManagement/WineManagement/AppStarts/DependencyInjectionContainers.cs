@@ -40,7 +40,9 @@ namespace WineManagement.AppStarts
 			services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<IAuthServices, AuthServices>();
 			services.AddScoped<IAccountService, AccountServices>();
-		}
+			services.AddScoped<ISupplierService, SupplierService>();
+            services.AddScoped<ISupplierRepository, SupplierRepository>();
+        }
 
 
 
@@ -56,10 +58,14 @@ namespace WineManagement.AppStarts
             services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<IAuthServices, AuthServices>();
 			services.AddScoped<IAccountService, AccountServices>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<ISupplierService, SupplierService>();
+            services.AddScoped<ISupplierRepository, SupplierRepository>();
 
 
-			// auto mapper
-			services.AddAutoMapper(typeof(AutoMapperConfig).Assembly);
+            // auto mapper
+            services.AddAutoMapper(typeof(AutoMapperConfig).Assembly);
 
             services.AddHttpContextAccessor();
 

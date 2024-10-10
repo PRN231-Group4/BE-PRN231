@@ -190,6 +190,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WineManagement.Controllers.SupplierController",
+    "Method": "GetAllSupplier",
+    "RelativePath": "api/supplier",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.SupplierController",
+    "Method": "CreateSupplier",
+    "RelativePath": "api/supplier/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.SupplierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.SupplierController",
+    "Method": "DeleteSupplier",
+    "RelativePath": "api/supplier/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.SupplierController",
+    "Method": "GetSupplierById",
+    "RelativePath": "api/supplier/get-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.SupplierController",
+    "Method": "UpdateSupplier",
+    "RelativePath": "api/supplier/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.SupplierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WineManagement.Controllers.WineController",
     "Method": "GetAllWine",
     "RelativePath": "api/wine",
