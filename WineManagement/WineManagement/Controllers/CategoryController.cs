@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace WineManagement.Controllers
 {
@@ -15,6 +17,8 @@ namespace WineManagement.Controllers
         {
             _categoryService = categoryService;
         }
+
+        [Authorize(Roles = "1")]
 
         [HttpPut("update")]
         public async Task<IActionResult> UpdateCategory(int id, CategoryDTO dto)
@@ -45,6 +49,8 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [Authorize(Roles = "1")]
+
         [HttpPost("create")]
         public async Task<IActionResult> CreateCategory(CategoryDTO dto)
         {
@@ -64,6 +70,7 @@ namespace WineManagement.Controllers
             }
 
         }
+        [Authorize(Roles = "1")]
 
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteCategory(int id)
@@ -83,6 +90,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [EnableQuery]
+        [Authorize(Roles = "Member")]
+
         [HttpGet]
         public async Task<IActionResult> GetAllCategory()
         {
@@ -101,6 +111,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [EnableQuery]
+        [Authorize(Roles = "1")]
+
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetCategoryById(int id)
         {

@@ -785,3 +785,8 @@ E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\scop
 E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\WineMana.59B81CD1.Up2Date
 E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\WineManagement.genruntimeconfig.cache
 E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\ref\WineManagement.dll
+E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.AspNetCore.OData.dll
+E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.Core.dll
+E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.Edm.dll
+E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.ModelBuilder.dll
+E:\WORKSPACE\Wives\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.Spatial.dll

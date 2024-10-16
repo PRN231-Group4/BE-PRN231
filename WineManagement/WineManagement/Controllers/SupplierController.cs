@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace WineManagement.Controllers
 {
@@ -17,6 +19,9 @@ namespace WineManagement.Controllers
         }
 
         [HttpPut("update")]
+        [EnableQuery]
+        [Authorize(Roles = "2")]
+
         public async Task<IActionResult> UpdateSupplier(int id, SupplierDTO dto)
         {
             try
@@ -46,6 +51,9 @@ namespace WineManagement.Controllers
             }
         }
         [HttpPost("create")]
+        [EnableQuery]
+        [Authorize(Roles = "2")]
+
         public async Task<IActionResult> CreateSupplier(SupplierDTO dto)
         {
             try
@@ -66,6 +74,9 @@ namespace WineManagement.Controllers
         }
 
         [HttpDelete("delete")]
+        [EnableQuery]
+        [Authorize(Roles = "2")]
+
         public async Task<IActionResult> DeleteSupplier(int id)
         {
             try
@@ -84,6 +95,9 @@ namespace WineManagement.Controllers
             }
         }
         [HttpGet]
+        [EnableQuery]
+        [Authorize(Roles ="Member")]
+
         public async Task<IActionResult> GetAllSupplier()
         {
             try
@@ -102,6 +116,9 @@ namespace WineManagement.Controllers
             }
         }
         [HttpGet("get-by-id")]
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
+
         public async Task<IActionResult> GetSupplierById(int id)
         {
             try

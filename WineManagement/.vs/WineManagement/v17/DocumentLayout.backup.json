@@ -3,172 +3,104 @@
   "WorkspaceRootPath": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\isupplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\isupplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\winebatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\winebatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\winecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\winecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\winebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\winebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\isupplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\isupplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\iwinebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\iwinebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\response\\accountresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\response\\accountresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\response\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\response\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\response\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\response\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\iwinebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\iwinebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\winebatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\winebatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\winedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\winedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appstarts\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appstarts\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\winestoragelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\winestoragelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\models\\apisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\models\\apisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\response\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\response\\tokenmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\winemanagementsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\winemanagementsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\winemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\winemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\views\\supplier\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\views\\supplier\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagementweb\\winemanagementweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{78EDACF0-EB97-4C6D-B7DB-F17BBAF8B187}|WineManagementWeb\\WineManagementWeb.csproj|solutionrelative:winemanagementweb\\winemanagementweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\winerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\winerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -179,16 +111,52 @@
       "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\wine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\winebatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\winebatchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\winebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\winebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\iwinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\iwinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\iwinebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\iwinebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\interface\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\winebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\winebatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\winebatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\winebatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\winerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\winerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\repository\\interface\\iwinebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repository\\interface\\iwinebatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\service\\interface\\iwineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,12 +167,16 @@
       "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\service\\wineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\businesslayer\\modal\\request\\winedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078CBD0B-5113-459D-A9B7-0A4307A2FBB9}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\modal\\request\\winedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\winebatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\winebatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\datalayer\\models\\winemanagementsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20CEC520-E182-417A-9518-4931A92E37A2}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\winemanagementsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|e:\\workspace\\wives\\be-prn231\\winemanagement\\winemanagement\\controllers\\winecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{732CABDE-76C4-4AFE-9561-A5A74DD4ADB9}|WineManagement\\WineManagement.csproj|solutionrelative:winemanagement\\controllers\\winecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -214,7 +186,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -250,379 +222,163 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WineBatchController.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineBatchController.cs",
-              "RelativeDocumentMoniker": "WineManagement\\Controllers\\WineBatchController.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineBatchController.cs",
-              "RelativeToolTip": "WineManagement\\Controllers\\WineBatchController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:34:34.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WineController.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineController.cs",
-              "RelativeDocumentMoniker": "WineManagement\\Controllers\\WineController.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineController.cs",
-              "RelativeToolTip": "WineManagement\\Controllers\\WineController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowIoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:33:57.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AutoMapperConfig.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AutoMapperConfig.cs",
-              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\AutoMapperConfig.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AutoMapperConfig.cs",
-              "RelativeToolTip": "WineManagement\\AppStarts\\AutoMapperConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:25:49.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DependencyInjectionContainers.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
-              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
-              "RelativeToolTip": "WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAawD8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:50:17.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\CategoryService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\CategoryService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\CategoryService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:22:19.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AccountService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\AccountService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AccountService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\AccountService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowF8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:45:26.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Program.cs",
-              "RelativeDocumentMoniker": "WineManagement\\Program.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Program.cs",
-              "RelativeToolTip": "WineManagement\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:24:12.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SupplierService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\SupplierService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\SupplierService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\SupplierService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\SupplierService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:33:45.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SupplierRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\SupplierRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\SupplierRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\SupplierRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\SupplierRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:30:49.233Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WineManagement\\appsettings.Development.json",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\appsettings.Development.json",
+              "RelativeToolTip": "WineManagement\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-01T04:24:06.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ISupplierRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ISupplierRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\ISupplierRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ISupplierRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\Interface\\ISupplierRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "AuthConfig.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AuthConfig.cs",
+              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\AuthConfig.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AuthConfig.cs",
+              "RelativeToolTip": "WineManagement\\AppStarts\\AuthConfig.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:29:12.694Z",
+              "WhenOpened": "2024-10-14T03:23:12.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WineBatchRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\WineBatchRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\WineBatchRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\WineBatchRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\WineBatchRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Program.cs",
+              "RelativeDocumentMoniker": "WineManagement\\Program.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Program.cs",
+              "RelativeToolTip": "WineManagement\\Program.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:31:05.744Z",
+              "WhenOpened": "2024-10-01T04:24:12.329Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RoleService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\RoleService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\RoleService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\RoleService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\RoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:10:28.743Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:19:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AuthService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Service\\AuthService.cs",
               "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AuthService.cs",
               "RelativeToolTip": "BusinessLayer\\Service\\AuthService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAIwIIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:44:58.95Z",
+              "WhenOpened": "2024-10-16T06:26:30.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SupplierController.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\SupplierController.cs",
-              "RelativeDocumentMoniker": "WineManagement\\Controllers\\SupplierController.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\SupplierController.cs",
-              "RelativeToolTip": "WineManagement\\Controllers\\SupplierController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAkwCsAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:37:31.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ISupplierService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ISupplierService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\ISupplierService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ISupplierService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\ISupplierService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:32:36.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AccountResponseModel.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\AccountResponseModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Response\\AccountResponseModel.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\AccountResponseModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Response\\AccountResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:32:15.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "baseResponse.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\baseResponse.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Response\\baseResponse.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\baseResponse.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Response\\baseResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:32:14.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginResponseModel.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\LoginResponseModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Response\\LoginResponseModel.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\LoginResponseModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Response\\LoginResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:32:14.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TokenModel.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\TokenModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Response\\TokenModel.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\TokenModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Response\\TokenModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:32:13.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SupplierDTO.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\SupplierDTO.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\SupplierDTO.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\SupplierDTO.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\SupplierDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:31:36.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Supplier.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Supplier.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Models\\Supplier.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Supplier.cs",
-              "RelativeToolTip": "DataLayer\\Models\\Supplier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:31:57.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IWineBatchService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:35:45.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "WineManagement\\Controllers\\RoleController.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "WineManagement\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvxIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:23:06.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 4,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "WineManagement\\Controllers\\CategoryController.cs",
               "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "WineManagement\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwC8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwF8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:28:05.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IRoleService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IRoleService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\IRoleService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IRoleService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\IRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:10:58.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RoleDTO.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\RoleDTO.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\RoleDTO.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\RoleDTO.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\RoleDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:12:43.348Z",
+              "WhenOpened": "2024-10-01T06:28:05.174Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Role.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Models\\Role.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Role.cs",
-              "RelativeToolTip": "DataLayer\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "SupplierController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\SupplierController.cs",
+              "RelativeDocumentMoniker": "WineManagement\\Controllers\\SupplierController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\SupplierController.cs",
+              "RelativeToolTip": "WineManagement\\Controllers\\SupplierController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAkwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:12:50.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:21:14.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RoleRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\RoleRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\RoleRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\RoleRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\RoleRepository.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:04:59.324Z",
+              "WhenOpened": "2024-10-16T05:57:46.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 5,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Service\\AccountService.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\AccountService.cs",
+              "RelativeToolTip": "BusinessLayer\\Service\\AccountService.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T06:24:13.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WineStorageLocation.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineStorageLocation.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\WineStorageLocation.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineStorageLocation.cs",
+              "RelativeToolTip": "DataLayer\\Models\\WineStorageLocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T03:23:19.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repository\\CategoryRepository.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\CategoryRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repository\\CategoryRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:05:55.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "WineManagementWeb\\appsettings.json",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\appsettings.json",
+              "RelativeToolTip": "WineManagementWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-16T03:41:54.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiSettings.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Models\\ApiSettings.cs",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Models\\ApiSettings.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Models\\ApiSettings.cs",
+              "RelativeToolTip": "WineManagementWeb\\Models\\ApiSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:39:21.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SupplierController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\SupplierController.cs",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Controllers\\SupplierController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\SupplierController.cs",
+              "RelativeToolTip": "WineManagementWeb\\Controllers\\SupplierController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:43:47.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\appsettings.json",
               "RelativeDocumentMoniker": "WineManagement\\appsettings.json",
@@ -634,81 +390,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IWineBatchRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:30:13.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WineManagement\\appsettings.Development.json",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\appsettings.Development.json",
-              "RelativeToolTip": "WineManagement\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-01T04:24:06.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\LoginModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\LoginModel.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\LoginModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\LoginModel.cs",
+              "DocumentIndex": 13,
+              "Title": "TokenModel.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\TokenModel.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Response\\TokenModel.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Response\\TokenModel.cs",
+              "RelativeToolTip": "BusinessLayer\\Modal\\Response\\TokenModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:47:04.215Z"
+              "WhenOpened": "2024-10-16T06:24:53.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\RegisterModel.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\RegisterModel.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\RegisterModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "WineManagementSystemContext.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineManagementSystemContext.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\WineManagementSystemContext.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineManagementSystemContext.cs",
+              "RelativeToolTip": "DataLayer\\Models\\WineManagementSystemContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:46:57.951Z"
+              "WhenOpened": "2024-10-01T04:24:06.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "WineBatchDTO.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:36:38.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "WineDTO.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineDTO.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\WineDTO.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineDTO.cs",
-              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\WineDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:36:42.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 15,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "WineManagement\\Controllers\\AuthController.cs",
@@ -720,80 +426,164 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AuthConfig.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AuthConfig.cs",
-              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\AuthConfig.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AuthConfig.cs",
-              "RelativeToolTip": "WineManagement\\AppStarts\\AuthConfig.cs",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Views\\Supplier\\Index.cshtml",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Views\\Supplier\\Index.cshtml",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Views\\Supplier\\Index.cshtml",
+              "RelativeToolTip": "WineManagementWeb\\Views\\Supplier\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:16:57.586Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T03:51:46.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\ICategoryService.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ICategoryService.cs",
-              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:20:47.266Z"
+              "DocumentIndex": 21,
+              "Title": "WineManagementWeb.csproj",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\WineManagementWeb.csproj",
+              "RelativeDocumentMoniker": "WineManagementWeb\\WineManagementWeb.csproj",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\WineManagementWeb.csproj",
+              "RelativeToolTip": "WineManagementWeb\\WineManagementWeb.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-16T03:43:25.722Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IRoleRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IRoleRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\IRoleRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IRoleRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\Interface\\IRoleRepository.cs",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Program.cs",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Program.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Program.cs",
+              "RelativeToolTip": "WineManagementWeb\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:42:56.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WineManagement.csproj",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+              "RelativeDocumentMoniker": "WineManagement\\WineManagement.csproj",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+              "RelativeToolTip": "WineManagement\\WineManagement.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-16T04:23:36.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Controllers\\BaseController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "WineManagementWeb\\Controllers\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T07:05:14.028Z"
+              "WhenOpened": "2024-10-16T03:44:36.105Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\CategoryRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\CategoryRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\CategoryRepository.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WineManagementWeb\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagementWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WineManagementWeb\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:05:55.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T03:45:45.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
-              "RelativeToolTip": "DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "WineRequest.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineRequest.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\WineRequest.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineRequest.cs",
+              "RelativeToolTip": "DataLayer\\Models\\WineRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:06:15.69Z"
+              "WhenOpened": "2024-10-14T03:23:16.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 23,
+              "Title": "DependencyInjectionContainers.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
+              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
+              "RelativeToolTip": "WineManagement\\AppStarts\\DependencyInjectionContainers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:50:17.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AutoMapperConfig.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AutoMapperConfig.cs",
+              "RelativeDocumentMoniker": "WineManagement\\AppStarts\\AutoMapperConfig.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\AppStarts\\AutoMapperConfig.cs",
+              "RelativeToolTip": "WineManagement\\AppStarts\\AutoMapperConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:25:49.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Category.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Category.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\Category.cs",
               "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Category.cs",
               "RelativeToolTip": "DataLayer\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T06:21:31.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 31,
+              "Title": "IWineBatchService.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
+              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\IWineBatchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:35:45.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\CategoryService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Service\\CategoryService.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\CategoryService.cs",
+              "RelativeToolTip": "BusinessLayer\\Service\\CategoryService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwFIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:22:19.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "WineBatchController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineBatchController.cs",
+              "RelativeDocumentMoniker": "WineManagement\\Controllers\\WineBatchController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineBatchController.cs",
+              "RelativeToolTip": "WineManagement\\Controllers\\WineBatchController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwHgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:34:34.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Wine.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\Wine.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\Wine.cs",
@@ -805,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 30,
               "Title": "IWineRepository.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IWineRepository.cs",
               "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\IWineRepository.cs",
@@ -817,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 33,
               "Title": "WineBatchService.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\WineBatchService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Service\\WineBatchService.cs",
@@ -829,7 +619,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 34,
+              "Title": "CategoryDTO.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
+              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\CategoryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:21:14.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WineBatchRepository.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\WineBatchRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repository\\WineBatchRepository.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\WineBatchRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repository\\WineBatchRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:31:05.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\ICategoryService.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\ICategoryService.cs",
+              "RelativeToolTip": "BusinessLayer\\Service\\Interface\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:20:47.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repository\\Interface\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:06:15.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IWineBatchRepository.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repository\\Interface\\IWineBatchRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:30:13.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "WineBatchDTO.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
+              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\WineBatchDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:36:38.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "WineService.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\WineService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Service\\WineService.cs",
@@ -841,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 39,
               "Title": "IWineService.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Service\\Interface\\IWineService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Service\\Interface\\IWineService.cs",
@@ -853,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 36,
               "Title": "WineRepository.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Repository\\WineRepository.cs",
               "RelativeDocumentMoniker": "DataLayer\\Repository\\WineRepository.cs",
@@ -865,27 +727,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 41,
+              "Title": "WineDTO.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Modal\\Request\\WineDTO.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\BusinessLayer\\Modal\\Request\\WineDTO.cs",
+              "RelativeToolTip": "BusinessLayer\\Modal\\Request\\WineDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T04:36:42.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "WineBatch.cs",
               "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineBatch.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\WineBatch.cs",
               "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineBatch.cs",
               "RelativeToolTip": "DataLayer\\Models\\WineBatch.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T04:36:55.967Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "WineManagementSystemContext.cs",
-              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineManagementSystemContext.cs",
-              "RelativeDocumentMoniker": "DataLayer\\Models\\WineManagementSystemContext.cs",
-              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\DataLayer\\Models\\WineManagementSystemContext.cs",
-              "RelativeToolTip": "DataLayer\\Models\\WineManagementSystemContext.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA/wB4AAAAIAAAA",
+              "DocumentIndex": 43,
+              "Title": "WineController.cs",
+              "DocumentMoniker": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineController.cs",
+              "RelativeDocumentMoniker": "WineManagement\\Controllers\\WineController.cs",
+              "ToolTip": "E:\\WORKSPACE\\Wives\\BE-PRN231\\WineManagement\\WineManagement\\Controllers\\WineController.cs",
+              "RelativeToolTip": "WineManagement\\Controllers\\WineController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowIoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T04:24:06.066Z"
+              "WhenOpened": "2024-10-01T04:33:57.019Z"
             }
           ]
         },

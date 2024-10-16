@@ -16,10 +16,11 @@ namespace DataLayer.Models
         public int? ManagerId { get; set; }
         public int? WineId { get; set; }
         public int? Quantity { get; set; }
-        public DateTime? RequestData { get; set; }
+        public DateTime? RequestDate { get; set; }
         public string? Description { get; set; }
         public string? Status { get; set; }
 
+        public virtual Account? Manager { get; set; }
         public virtual Supplier? Supplier { get; set; }
         public virtual ICollection<WineBatch> WineBatches { get; set; }
         public virtual ICollection<WineCheck> WineChecks { get; set; }

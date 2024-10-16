@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
 namespace WineManagement.AppStarts
 {
@@ -23,8 +24,9 @@ namespace WineManagement.AppStarts
 					ValidateIssuer = false,
 					ValidateAudience = false,
 					ValidateLifetime = true,
-					ValidateIssuerSigningKey = true
-				};
+					ValidateIssuerSigningKey = true,
+                    RoleClaimType = ClaimTypes.Role
+                };
 			});
 			services.AddAuthorization();
 		}

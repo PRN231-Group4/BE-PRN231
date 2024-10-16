@@ -17,6 +17,7 @@ namespace DataLayer.Models
         public string? ImageUrl { get; set; }
 
         public virtual WineBatch? Batch { get; set; }
+        public virtual Account? Inspector { get; set; }
         public virtual WineStorageLocation? Location { get; set; }
         public virtual Wine? Wine { get; set; }
     }
