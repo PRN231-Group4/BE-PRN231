@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {}
+    "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+    "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
+        "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
+        "outputPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
+              "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -38,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,26 +78,44 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+    "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
+        "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
+        "outputPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,6 +123,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,6 +136,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -153,26 +187,44 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj": {
+    "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
+        "projectUniqueName": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
         "projectName": "View_Wine",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\obj\\",
+        "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
+        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
+        "outputPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,17 +232,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
+              "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
+              "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -199,6 +252,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -235,6 +293,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -243,21 +319,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {
+    "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+        "projectUniqueName": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
         "projectName": "WineManagement",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\WineManagement\\obj\\",
+        "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\WineManagement\\WineManagement.csproj",
+        "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
+        "outputPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\WineManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -265,17 +345,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
+              "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj": {
-                "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj"
+              "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj": {
+                "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj"
               }
             }
           }
@@ -284,6 +365,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -293,6 +379,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.28, )"
+            },
+            "Microsoft.AspNetCore.OData": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -328,6 +418,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -336,7 +444,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

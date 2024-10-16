@@ -102,7 +102,7 @@ namespace BusinessLayer.Service
 
 			var account = new Account()
 			{
-				RoleId = 2,
+				RoleId = registerModel.RoleId,
 				Username = registerModel.Username,
 				Password = HashPassword(registerModel.Password),
 				Status = "active",

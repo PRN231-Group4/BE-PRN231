@@ -1,13 +1,16 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace WineManagement.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("odata/[controller]")]
     [ApiController]
-    public class CategoryController : ControllerBase
+    public class CategoryController : ODataController
     {
         private readonly ICategoryService _categoryService;
 
@@ -16,6 +19,9 @@ namespace WineManagement.Controllers
             _categoryService = categoryService;
         }
 
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateCategory(int id, CategoryDTO dto)
         {
@@ -45,6 +51,8 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateCategory(CategoryDTO dto)
         {
@@ -65,6 +73,8 @@ namespace WineManagement.Controllers
 
         }
 
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
@@ -83,6 +93,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllCategory()
         {
@@ -101,6 +114,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetCategoryById(int id)
         {

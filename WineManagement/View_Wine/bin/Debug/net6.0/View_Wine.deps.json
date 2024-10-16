@@ -2802,7 +2802,10 @@
           "SyrianBallaS.AutoMapper.Extensions.Microsoft.DependencyInjection.Signed": "3.2.0"
         },
         "runtime": {
-          "BusinessLayer.dll": {}
+          "BusinessLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DataLayer/1.0.0": {
@@ -2813,7 +2816,10 @@
           "Microsoft.Extensions.Configuration.Json": "6.0.0"
         },
         "runtime": {
-          "DataLayer.dll": {}
+          "DataLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

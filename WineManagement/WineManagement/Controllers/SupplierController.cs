@@ -1,13 +1,16 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace WineManagement.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("odata/[controller]")]
     [ApiController]
-    public class SupplierController : ControllerBase
+    public class SupplierController : ODataController
     {
         private readonly ISupplierService _supplierService;
 
@@ -16,6 +19,8 @@ namespace WineManagement.Controllers
             _supplierService = supplierService;
         }
 
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateSupplier(int id, SupplierDTO dto)
         {
@@ -45,6 +50,8 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateSupplier(SupplierDTO dto)
         {
@@ -64,7 +71,8 @@ namespace WineManagement.Controllers
             }
 
         }
-
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteSupplier(int id)
         {
@@ -83,6 +91,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllSupplier()
         {
@@ -101,6 +112,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetSupplierById(int id)
         {
