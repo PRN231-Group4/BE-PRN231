@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace WineManagement.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("odata/[controller]")]
     [ApiController]
     public class WineBatchController : ControllerBase
     {
@@ -16,6 +18,9 @@ namespace WineManagement.Controllers
             _wineBatchService = wineBatchService;
         }
 
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateWineBatch(int id, WineBatchDTO dto)
         {
@@ -45,6 +50,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateWineBatch(WineBatchDTO dto)
         {
@@ -65,6 +73,9 @@ namespace WineManagement.Controllers
 
         }
 
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
+
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteWineBatch(int id)
         {
@@ -83,6 +94,9 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllWineBatch()
         {
@@ -101,6 +115,10 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+
+        [EnableQuery]
+        [Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetWineBatchById(int id)
         {

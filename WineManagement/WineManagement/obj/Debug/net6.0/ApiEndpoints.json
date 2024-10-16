@@ -32,9 +32,178 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "CreateWine",
+    "RelativePath": "api/wine/createwine/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.WineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "DeleteWine",
+    "RelativePath": "api/wine/deletewine/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "GetAllWine",
+    "RelativePath": "api/wine/getallwine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "GetWineById",
+    "RelativePath": "api/wine/getwinebyid/get-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "GetWineByName",
+    "RelativePath": "api/wine/getwinebyname/get-by-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineController",
+    "Method": "UpdateWine",
+    "RelativePath": "api/wine/updatewine/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.WineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController",
+    "Method": "GetServiceDocument",
+    "RelativePath": "odata",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.OData.ODataServiceDocument",
+        "MediaTypes": [
+          "application/json;odata.metadata=minimal;odata.streaming=true",
+          "application/json;odata.metadata=minimal;odata.streaming=false",
+          "application/json;odata.metadata=minimal",
+          "application/json;odata.metadata=full;odata.streaming=true",
+          "application/json;odata.metadata=full;odata.streaming=false",
+          "application/json;odata.metadata=full",
+          "application/json;odata.metadata=none;odata.streaming=true",
+          "application/json;odata.metadata=none;odata.streaming=false",
+          "application/json;odata.metadata=none",
+          "application/json;odata.streaming=true",
+          "application/json;odata.streaming=false",
+          "application/json",
+          "application/xml",
+          "application/json",
+          "text/plain",
+          "application/octet-stream",
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "odata/"
+  },
+  {
+    "ContainingType": "Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController",
+    "Method": "GetMetadata",
+    "RelativePath": "odata/$metadata",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.OData.Edm.IEdmModel",
+        "MediaTypes": [
+          "application/json;odata.metadata=minimal;odata.streaming=true",
+          "application/json;odata.metadata=minimal;odata.streaming=false",
+          "application/json;odata.metadata=minimal",
+          "application/json;odata.metadata=full;odata.streaming=true",
+          "application/json;odata.metadata=full;odata.streaming=false",
+          "application/json;odata.metadata=full",
+          "application/json;odata.metadata=none;odata.streaming=true",
+          "application/json;odata.metadata=none;odata.streaming=false",
+          "application/json;odata.metadata=none",
+          "application/json;odata.streaming=true",
+          "application/json;odata.streaming=false",
+          "application/json",
+          "application/xml",
+          "application/json",
+          "text/plain",
+          "application/octet-stream",
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "odata/$metadata"
+  },
+  {
     "ContainingType": "WineManagement.Controllers.CategoryController",
     "Method": "GetAllCategory",
-    "RelativePath": "api/category",
+    "RelativePath": "odata/category",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +213,7 @@
   {
     "ContainingType": "WineManagement.Controllers.CategoryController",
     "Method": "CreateCategory",
-    "RelativePath": "api/category/create",
+    "RelativePath": "odata/category/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -60,7 +229,7 @@
   {
     "ContainingType": "WineManagement.Controllers.CategoryController",
     "Method": "DeleteCategory",
-    "RelativePath": "api/category/delete",
+    "RelativePath": "odata/category/delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -76,7 +245,7 @@
   {
     "ContainingType": "WineManagement.Controllers.CategoryController",
     "Method": "GetCategoryById",
-    "RelativePath": "api/category/get-by-id",
+    "RelativePath": "odata/category/get-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -92,7 +261,7 @@
   {
     "ContainingType": "WineManagement.Controllers.CategoryController",
     "Method": "UpdateCategory",
-    "RelativePath": "api/category/update",
+    "RelativePath": "odata/category/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -113,7 +282,7 @@
   {
     "ContainingType": "WineManagement.Controllers.RoleController",
     "Method": "GetAllRole",
-    "RelativePath": "api/role",
+    "RelativePath": "odata/role",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -123,7 +292,7 @@
   {
     "ContainingType": "WineManagement.Controllers.RoleController",
     "Method": "CreateRole",
-    "RelativePath": "api/role/create",
+    "RelativePath": "odata/role/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -139,7 +308,7 @@
   {
     "ContainingType": "WineManagement.Controllers.RoleController",
     "Method": "DeleteRole",
-    "RelativePath": "api/role/delete",
+    "RelativePath": "odata/role/delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -155,7 +324,7 @@
   {
     "ContainingType": "WineManagement.Controllers.RoleController",
     "Method": "GetRoleById",
-    "RelativePath": "api/role/get-by-id",
+    "RelativePath": "odata/role/get-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -171,7 +340,7 @@
   {
     "ContainingType": "WineManagement.Controllers.RoleController",
     "Method": "UpdateRole",
-    "RelativePath": "api/role/update",
+    "RelativePath": "odata/role/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -192,7 +361,7 @@
   {
     "ContainingType": "WineManagement.Controllers.SupplierController",
     "Method": "GetAllSupplier",
-    "RelativePath": "api/supplier",
+    "RelativePath": "odata/supplier",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -202,7 +371,7 @@
   {
     "ContainingType": "WineManagement.Controllers.SupplierController",
     "Method": "CreateSupplier",
-    "RelativePath": "api/supplier/create",
+    "RelativePath": "odata/supplier/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -218,7 +387,7 @@
   {
     "ContainingType": "WineManagement.Controllers.SupplierController",
     "Method": "DeleteSupplier",
-    "RelativePath": "api/supplier/delete",
+    "RelativePath": "odata/supplier/delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -234,7 +403,7 @@
   {
     "ContainingType": "WineManagement.Controllers.SupplierController",
     "Method": "GetSupplierById",
-    "RelativePath": "api/supplier/get-by-id",
+    "RelativePath": "odata/supplier/get-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -250,7 +419,7 @@
   {
     "ContainingType": "WineManagement.Controllers.SupplierController",
     "Method": "UpdateSupplier",
-    "RelativePath": "api/supplier/update",
+    "RelativePath": "odata/supplier/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -269,104 +438,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "GetAllWine",
-    "RelativePath": "api/wine",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "CreateWine",
-    "RelativePath": "api/wine/create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "BusinessLayer.Modal.Request.WineDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "DeleteWine",
-    "RelativePath": "api/wine/delete",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "GetWineById",
-    "RelativePath": "api/wine/get-by-id",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "GetWineByName",
-    "RelativePath": "api/wine/get-by-name",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WineManagement.Controllers.WineController",
-    "Method": "UpdateWine",
-    "RelativePath": "api/wine/update",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "dto",
-        "Type": "BusinessLayer.Modal.Request.WineDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "WineManagement.Controllers.WineBatchController",
     "Method": "GetAllWineBatch",
-    "RelativePath": "api/winebatch",
+    "RelativePath": "odata/winebatch",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -376,7 +450,7 @@
   {
     "ContainingType": "WineManagement.Controllers.WineBatchController",
     "Method": "CreateWineBatch",
-    "RelativePath": "api/winebatch/create",
+    "RelativePath": "odata/winebatch/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -392,7 +466,7 @@
   {
     "ContainingType": "WineManagement.Controllers.WineBatchController",
     "Method": "DeleteWineBatch",
-    "RelativePath": "api/winebatch/delete",
+    "RelativePath": "odata/winebatch/delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -408,7 +482,7 @@
   {
     "ContainingType": "WineManagement.Controllers.WineBatchController",
     "Method": "GetWineBatchById",
-    "RelativePath": "api/winebatch/get-by-id",
+    "RelativePath": "odata/winebatch/get-by-id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -424,7 +498,7 @@
   {
     "ContainingType": "WineManagement.Controllers.WineBatchController",
     "Method": "UpdateWineBatch",
-    "RelativePath": "api/winebatch/update",
+    "RelativePath": "odata/winebatch/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

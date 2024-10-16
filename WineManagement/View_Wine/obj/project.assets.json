@@ -11397,19 +11397,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\ngmcu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
+      "projectUniqueName": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
       "projectName": "View_Wine",
-      "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\View_Wine\\obj\\",
+      "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\View_Wine.csproj",
+      "packagesPath": "C:\\Users\\ngmcu\\.nuget\\packages\\",
+      "outputPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\View_Wine\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ngmcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11417,17 +11422,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
+            "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
+            "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "E:\\WORKSPACE\\resolveConflict\\BE-PRN231\\WineManagement\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -11436,6 +11442,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11472,6 +11483,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11480,7 +11509,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
