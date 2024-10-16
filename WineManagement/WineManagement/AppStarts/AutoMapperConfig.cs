@@ -2,6 +2,7 @@
 using BusinessLayer.Modal.Request;
 using DataLayer.Models;
 using System.Reflection;
+using View_Wine.Models;
 
 namespace WineManagement.AppStarts
 {
@@ -14,6 +15,7 @@ namespace WineManagement.AppStarts
             CreateMap<CategoryDTO, Category>().ReverseMap();
             CreateMap<RoleDTO, Role>().ReverseMap();
             CreateMap<SupplierDTO, Supplier>().ReverseMap();
+
 
 
         }
