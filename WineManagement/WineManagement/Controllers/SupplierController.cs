@@ -93,7 +93,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllSupplier()
         {

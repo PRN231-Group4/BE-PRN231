@@ -120,7 +120,9 @@ static IEdmModel GetEdmModel()
 {
     var builder = new ODataConventionModelBuilder();
     builder.EntitySet<Category>("Category");
+    builder.EntitySet<Role>("Role");
     builder.EntitySet<Supplier>("Supplier");
+    builder.EntitySet<WineBatch>("WineBatch");
 
 
 
@@ -128,6 +130,10 @@ static IEdmModel GetEdmModel()
     var categoryEntity = builder.EntityType<Category>();
     categoryEntity.HasKey(c => c.CategoryId);
     var supplierEntity = builder.EntityType<Supplier>();
-    supplierEntity.HasKey(s => s.SupplierId);// Đảm bảo có khóa chính
+    supplierEntity.HasKey(s => s.SupplierId);
+    var roleEntity = builder.EntityType<Role>();
+    roleEntity.HasKey(r => r.RoleId);
+    var WineBatchEntity = builder.EntityType<WineBatch>();
+    WineBatchEntity.HasKey(w => w.BatchId);
     return builder.GetEdmModel();
 }

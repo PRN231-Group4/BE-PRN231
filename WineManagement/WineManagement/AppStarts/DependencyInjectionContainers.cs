@@ -42,12 +42,16 @@ namespace WineManagement.AppStarts
 			services.AddScoped<IAccountService, AccountServices>();
 			services.AddScoped<ISupplierService, SupplierService>();
             services.AddScoped<ISupplierRepository, SupplierRepository>();
+            services.AddScoped<IWineRequestRepository, WineRequestRepository>();
+            services.AddScoped<IWineRequestService, WineRequestService>();
+
+
         }
 
 
 
 
-		public static IServiceCollection AddWebAPIService(this IServiceCollection services)
+        public static IServiceCollection AddWebAPIService(this IServiceCollection services)
         {
             // use DI here
             services.AddScoped<IWineRepository, WineRepository>();
@@ -62,6 +66,8 @@ namespace WineManagement.AppStarts
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<ISupplierService, SupplierService>();
             services.AddScoped<ISupplierRepository, SupplierRepository>();
+            services.AddScoped<IWineRequestRepository, WineRequestRepository>();
+            services.AddScoped<IWineRequestService, WineRequestService>();
 
 
             // auto mapper

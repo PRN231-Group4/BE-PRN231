@@ -11,7 +11,7 @@ namespace View_Wine.Controllers
 {
     public class WinesController : Controller
     {
-        Uri _baseAddress = new Uri("http://localhost:5067/api");
+        Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
 
         public WinesController()
