@@ -33,7 +33,7 @@ namespace DataLayer.Repository
 
         public async Task<List<Wine>> GetAll()
         {
-            var data = await _context.Wines.ToListAsync();
+            var data = await _context.Wines.Include(x=>x.Category).ToListAsync();
             return data;
         }
 

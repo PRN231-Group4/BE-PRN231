@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using View_Wine.Models;
 using DataLayer.Models;
+using System.Text;
+using System.Net.Http;
+using System.Reflection.Metadata;
 
 namespace View_Wine.Controllers
 {
@@ -28,24 +31,39 @@ namespace View_Wine.Controllers
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 string data = httpResponseMessage.Content.ReadAsStringAsync().Result;
-                wineList = JsonConvert.DeserializeObject<List<WineModal>>(data);
+                wineList = JsonConvert.DeserializeObject<List<WineModal>>(data).ToList();
             }
+            return View(wineList); //Modal nao thi display modal do , dung co lam dung scaffold 
+        }
 
-            var dataLayerWines = wineList.Select(w => new Wine
+        [HttpGet]
+        public IActionResult Create()
+        {    
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(WineModal modal)
+        {
+            try
             {
-                WineId = w.WineId,
-                CategoryId = w.CategoryId, // Ensure this is mapped if needed
-                Name = w.Name,
-                Origin = w.Origin,
-                Volume = w.Volume,
-                AlcContent = w.AlcContent,
-                Description = w.Description,
-                Status = w.Status,
-                // Handle Category mapping if needed
-                Category = null // Set this if you want to handle categories
-            }).ToList(); // Ensure you convert to a List
+                string data = JsonConvert.SerializeObject(modal);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage responseMessage = _httpClient
+                    .PostAsync(_httpClient.BaseAddress + "/wine/createwine/create", content).Result;
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    TempData["successMessage"] = "Product Created";
+                    return RedirectToAction("Index");
+                }
+            }
+            catch(Exception ex) 
+            {
+                TempData["errorMessage"] = ex.Message;
 
-            return View(dataLayerWines); // Pass the correct model type
+                return View();
+
+            }
+            return View();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLayer.Modal.Request;
+using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
 using DataLayer.Models;
 using DataLayer.Repository.Interface;
@@ -22,13 +23,13 @@ namespace BusinessLayer.Service
             _mapper = mapper;
         }
 
-        public async Task<WineDTO> Create(WineDTO data)
+        public async Task<WineDTORespond> Create(WineDTORespond data)
         {
             try
             {
                 var map = _mapper.Map<Wine>(data);
                 var dataCreate = await _wineRepo.Create(map);
-                var resutl = _mapper.Map<WineDTO>(dataCreate);
+                var resutl = _mapper.Map<WineDTORespond>(dataCreate);
                 return resutl;
             }
             catch (Exception ex)
@@ -84,7 +85,7 @@ namespace BusinessLayer.Service
             return dataa;
         }
 
-        public async Task<bool> Update(int id, WineDTO data)
+        public async Task<bool> Update(int id, WineDTORespond data)
         {
             try
             {

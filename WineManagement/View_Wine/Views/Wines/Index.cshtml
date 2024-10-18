@@ -1,5 +1,4 @@
-﻿@model IEnumerable<DataLayer.Models.Wine>
-
+﻿@model IEnumerable<View_Wine.Models.WineModal>
 @{
     ViewData["Title"] = "Index";
 }
@@ -31,7 +30,7 @@
                 @Html.DisplayNameFor(model => model.Status)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category)
+                @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th></th>
         </tr>
@@ -58,7 +57,7 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category.Name)
+                    @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.WineId">Edit</a> |

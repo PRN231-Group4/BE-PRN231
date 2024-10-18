@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Modal.Request
+namespace BusinessLayer.Modal.Response
 {
-    public class WineDTO
+    public class WineDTORespond
     {
-        public string CategoryName { get; set; } = null!;
+        public int CategoryId { get; set; }
         public string Name { get; set; } = null!;
         public string? Origin { get; set; }
         public decimal? Volume { get; set; }

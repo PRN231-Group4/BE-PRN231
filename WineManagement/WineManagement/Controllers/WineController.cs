@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Modal.Request;
+using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace WineManagement.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdateWine(int id, WineDTO dto)
+        public async Task<IActionResult> UpdateWine(int id, WineDTORespond dto)
         {
             try
             {
@@ -46,7 +47,7 @@ namespace WineManagement.Controllers
             }
         }
         [HttpPost("create")]
-        public async Task<IActionResult> CreateWine(WineDTO dto)
+        public async Task<IActionResult> CreateWine(WineDTORespond dto)
         {
             try
             {
