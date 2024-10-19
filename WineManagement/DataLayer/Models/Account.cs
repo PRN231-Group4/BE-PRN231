@@ -10,7 +10,8 @@ namespace DataLayer.Models
         public string Username { get; set; } = null!;
         public string Password { get; set; } = null!;
         public string Status { get; set; } = null;
+        public DateTime CreateAt { get; set; } = DateTime.Now;
 
-		public virtual Role Role { get; set; } = null!;
+        public virtual Role Role { get; set; } = null!;
 	}
 }

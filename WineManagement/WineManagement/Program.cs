@@ -1,32 +1,38 @@
-using BusinessLayer.Service;
-using BusinessLayer.Service.Interface;
-using DataLayer.Models;
-using DataLayer.Repository;
+﻿using DataLayer.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+using System.Text;
 using WineManagement.AppStarts;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+// Thêm OData
+builder.Services.AddControllers()
+    .AddOData(opt =>
+    {
+        opt.Select().Filter().OrderBy().Expand().Count().SetMaxTop(100)
+            .AddRouteComponents("odata", GetEdmModel());
+    });
 
 
-// Install AutoMapper
-//builder.Services.ConfigureAutoMapper();
 // Install DI and dbcontext
 builder.Services.InstallService(builder.Configuration);
+
 // Swagger config
-//builder.Services.ConfigureSwaggerServices("SWDProject");
 builder.Services.ConfigureAuthService(builder.Configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//DependencyInjection
+// DependencyInjection
 builder.Services.AddWebAPIService();
 
-//DBcontext
+// DBcontext
 builder.Services.AddDbContext<WineManagementSystemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBDefault"));
@@ -34,13 +40,25 @@ builder.Services.AddDbContext<WineManagementSystemContext>(options =>
 
 var app = builder.Build();
 
+static IEdmModel GetEdmModel()
+{
+    var builder = new ODataConventionModelBuilder();
+
+    // Đăng ký các thực thể và mô hình OData ở đây
+    builder.EntitySet<Account>("Accounts");
+    builder.EntitySet<Role>("Roles");
+
+    return builder.GetEdmModel();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

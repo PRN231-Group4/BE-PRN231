@@ -10,7 +10,7 @@ namespace BusinessLayer.Service.Interface
 {
 	public interface IAccountService
 	{
-		IEnumerable<Account> GetAccounts();
+        Task<IEnumerable<Account>> GetAllAccounts();
 		Task<Account> GetAccountByIdAsync(int id);
 		Task CreateAccountAsync(Account account);
 		Task UpdateAccountAsync(Account account);

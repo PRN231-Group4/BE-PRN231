@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Modal.Request;
 using BusinessLayer.Modal.Response;
+using DataLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace BusinessLayer.Service.Interface
 		Task<BaseResponseForLogin<LoginResponseModel>> AuthenticateAsync(string username, string password);
 
 		Task<BaseResponse<TokenModel>> RegisterAsync(RegisterModel registerModel);
-		string HashPassword(string password);
+
+        string HashPassword(string password);
 		bool VerifyPassword(string password, string hashedPassword);
 	}
 

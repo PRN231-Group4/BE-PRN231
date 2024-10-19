@@ -1,0 +1,315 @@
+﻿@using DataLayer.Models
+@model IEnumerable<Account>
+
+@section Scripts {
+    <script src="controller/home.js" asp-append-version="true"></script>
+    <script src="controller/account.js" asp-append-version="true"></script>
+}
+
+@section Styles {
+    <link href="css/home.css" rel="stylesheet" asp-append-version="true" />
+}
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/kaiadmin/logo_light.svg"
+                         alt="navbar brand"
+                         class="navbar-brand"
+                         height="20" />
+                </a>
+                <div class="nav-toggle">
+                    <button class="btn btn-toggle toggle-sidebar">
+                        <i class="gg-menu-right"></i>
+                    </button>
+                    <button class="btn btn-toggle sidenav-toggler">
+                        <i class="gg-menu-left"></i>
+                    </button>
+                </div>
+                <button class="topbar-toggler more">
+                    <i class="gg-more-vertical-alt"></i>
+                </button>
+            </div>
+            <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-secondary">
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse"
+                           href="#dashboard"
+                           class="collapsed"
+                           aria-expanded="false">
+                            <i class="fas fa-home"></i>
+                            <p>Bảng người dùng</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+        <div class="main-header">
+            <div class="main-header-logo">
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/img/kaiadmin/logo_light.svg"
+                             alt="navbar brand"
+                             class="navbar-brand"
+                             height="20" />
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <!-- End Logo Header -->
+            </div>
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="btn btn-search pe-1">
+                                    <i class="fa fa-search search-icon"></i>
+                                </button>
+                            </div>
+                            <input type="text"
+                                   placeholder="Search ..."
+                                   class="form-control" />
+                        </div>
+                    </nav>
+
+                    <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                        <li class="nav-item topbar-user dropdown hidden-caret">
+                            <a id="logout-button" class="profile-pic"
+                               href="/login">
+                                <div class="avatar-sm">
+                                    <img src="../assets/img/profile.jpg"
+                                         alt="..."
+                                         class="avatar-img rounded-circle" />
+                                </div>
+                                <span class="profile-username">
+                                    <span class="op-7">Đăng xuất</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li id="account-register" class="nav-item topbar-user dropdown hidden-caret">
+                            <a id="logout-button" class="profile-pic"
+                               href="/register">
+                                <span class="profile-username">
+                                    <span class="op-7">Đăng ký</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li id="account-section" class="nav-item topbar-user dropdown hidden-caret">
+                            <a class="profile-pic"
+                               href="/login">
+                                <span class="profile-username">
+                                    <span class="op-7">Đăng nhập</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+
+        <div class="container">
+            <div class="page-inner">
+                <div class="page-header">
+                    <h3 class="fw-bold mb-3">Quản lý người dùng</h3>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Basic</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="basic-datatables"
+                                           class="display table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Tên</th>
+                                                <th>Chức vụ</th>
+                                                <th>Trang thái</th>
+                                                <th>Ngày tạo</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model != null && Model.Any())
+                                            {
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@item.AccountId</td>
+                                                        <td>@item.Username</td>
+                                                        @if (item.RoleId == 1)
+                                                        {
+                                                            <td>Quản trị viên</td>
+                                                        }
+                                                        else if (item.RoleId == 2)
+                                                        {
+                                                            <td>Quản lý</td>
+                                                        }
+                                                        else if (item.RoleId == 3)
+                                                        {
+                                                            <td>Người dùng</td>
+                                                        }
+                                                        @if (item.Status == "active")
+                                                        {
+                                                            <td>Đang sử dụng <i class="fas fa-circle text-success" style="font-size: 10px; margin-right: 5px;"></i></td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td>Khóa <i class="fas fa-lock" style="color: red; margin-right: 5px;"></i> </td>
+                                                        }
+                                                        <td>@item.CreateAt.ToString("dd-MM-yyyy")</td>
+                                                        <td>
+                                                            <i class="fas fa-ellipsis-v" id="iconToggle-@item.AccountId" style="cursor: pointer;"></i>
+                                                            <div id="actionIcons-@item.AccountId" style="display: none; margin-top: 5px;">
+                                                                <a href="javascript:void(0);" class="view-account" data-id="@item.AccountId">
+                                                                    <i class="fas fa-eye" title="View" style="cursor: pointer; margin-right: 10px; color: #23c436;"></i>
+                                                                </a>
+                                                                <a href="javascript:void(0);" class="edit-account" data-id="@item.AccountId">
+                                                                    <i class="fas fa-pencil-alt" title="Edit" style="cursor: pointer; margin-right: 10px; color: #878748;"></i>
+                                                                </a>
+                                                                <a>
+                                                                    <i class="fas fa-trash" title="Delete" style="cursor: pointer; color: red;" onclick="deleteAccount(@item.AccountId)"></i>
+                                                                </a>
+
+
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            }
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal Xem chi tiết -->
+        <div class="modal fade" id="accountDetailsModal" tabindex="-1" aria-labelledby="accountDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="accountDetailsModalLabel">Chi tiết người dùng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Account details will be loaded here -->
+                        <p><strong>ID:</strong> <span id="modalAccountId"></span></p>
+                        <p><strong>Tên:</strong> <span id="modalUsername"></span></p>
+                        <p><strong>Trạng thái:</strong> <span id="modalStatus"></span></p>
+                        <p><strong>Chức vụ:</strong> <span id="modalRoleId"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal để chỉnh sửa thông tin tài khoản -->
+        <div class="modal fade" id="editAccountModal" tabindex="-1" aria-labelledby="editAccountModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editAccountModalLabel">Chỉnh sửa tài khoản</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editAccountForm">
+                            <input type="hidden" id="editAccountId">
+                            <div class="mb-3">
+                                <label for="editUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="editUsername" name="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Chức vụ</label>
+                                <select id="role">
+                                    <option value="1">Quản trị viên</option>
+                                    <option value="2">Quản lý</option>
+                                    <option value="3">Người dùng</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editStatus" class="form-label">Trạng thái</label>
+                                @* <input type="text" class="form-control" id="editStatus" name="status"> *@
+                                <select id="editStatus">
+                                    <option value="active">Mở</option>
+                                    <option value="inactive">Khóa</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editRoleId" class="form-label">Role ID</label>
+                                <input type="text" class="form-control" id="editRoleId" name="roleId">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary" id="saveChanges">Lưu thay đổi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid d-flex justify-content-between">
+                <nav class="pull-left">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://www.themekita.com">
+                                ThemeKita
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Help </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Licenses </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    2024, made with <i class="fa fa-heart heart text-danger"></i> by
+                    <a href="http://www.themekita.com">ThemeKita</a>
+                </div>
+                <div>
+                    Distributed by
+                    <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>

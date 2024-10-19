@@ -21,11 +21,11 @@ namespace BusinessLayer.Service
 			_unitOfWork = unitOfWork;
 		}
 
-		public IEnumerable<Account> GetAccounts()
+		public async Task<IEnumerable<Account>> GetAllAccounts()
 		{
-			return _unitOfWork.Repository<Account>().GetAll();
+			return await _unitOfWork.Repository<Account>().GetAll().ToListAsync();
 
-		}
+        }
 
 		public async Task<Account> GetAccountByIdAsync(int id)
 		{

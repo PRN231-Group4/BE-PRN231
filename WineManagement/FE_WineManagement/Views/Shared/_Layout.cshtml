@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quản lý kho rượu</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+          name="viewport" />
+
+    @await RenderSectionAsync(name: "Styles", required: false)
+</head>
+<body>
+
+    <partial name="P_Styles"/>
+
+    @RenderBody()
+
+    <partial name="P_Scripts" />
+    
+</body>
+@await RenderSectionAsync(name: "Scripts", required: false)
+</html>

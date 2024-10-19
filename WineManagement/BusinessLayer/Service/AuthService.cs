@@ -35,15 +35,14 @@ namespace BusinessLayer.Service
 
 			if (account != null && VerifyPassword(password, account.Password))
 			{
-				var userWithRole = await _accountService.GetAccountByUsernameAsync(account.Username);
-				string token = GenerateJwtToken(account.Username, userWithRole.Role.Name, account.AccountId);
-				//var bannedAccount = await _unitOfWork.Repository<BannedAccount>().FindAsync(ba => ba.UserId == user.Id && ba.Status == true);
+				//var userWithRole = await _accountService.GetAccountByUsernameAsync(account.Username);
+				string token = GenerateJwtToken(account.Username, account.Role.Name, account.AccountId);
 
 				if (account.Status == "inactive")
 				{
 					return new BaseResponseForLogin<LoginResponseModel>()
 					{
-						Code = 404,
+						Code = 403,
 						Message = "Your Account has been banned. Check email for reason",
 						Data = new LoginResponseModel()
 						{
@@ -79,17 +78,17 @@ namespace BusinessLayer.Service
 			}
 			return new BaseResponseForLogin<LoginResponseModel>()
 			{
-				Code = 404,
+				Code = 401,
 				Message = "Username or Password incorrect",
 				Data = null,
 				IsBanned = false
 			};
 		}
 
-
 		public async Task<BaseResponse<TokenModel>> RegisterAsync(RegisterModel registerModel)
 		{
-			var existingUser = await _unitOfWork.Repository<Account>().FindAsync(u => u.Username == registerModel.Username);
+            // Kiểm tra xem Username đã tồn tại hay chưa
+            var existingUser = await _unitOfWork.Repository<Account>().FindAsync(u => u.Username == registerModel.Username);
 
 			if (existingUser != null)
 			{
@@ -100,18 +99,29 @@ namespace BusinessLayer.Service
 				};
 			}
 
-			var account = new Account()
-			{
-				RoleId = 2,
-				Username = registerModel.Username,
-				Password = HashPassword(registerModel.Password),
-				Status = "active",
-			};
+            var existingRole = await _unitOfWork.Repository<Role>().FindAsync(r => r.RoleId == registerModel.RoleId);
+            if (existingRole == null)
+            {
+                return new BaseResponse<TokenModel>
+                {
+                    Code = 400,
+                    Message = "Invalid RoleId"
+                };
+            }
+            var account = new Account()
+            {
+                RoleId = registerModel.RoleId,
+                Username = registerModel.Username,
+                Password = HashPassword(registerModel.Password),  // Hash password trước khi lưu
+                Status = registerModel.Status ? "active" : "inactive",  // Xác định trạng thái
+            };
 
-			await _unitOfWork.Repository<Account>().InsertAsync(account);
+
+            await _unitOfWork.Repository<Account>().InsertAsync(account);
 			await _unitOfWork.CommitAsync();
 
 			var userWithRole = await _accountService.GetAccountByUsernameAsync(account.Username);
+
 			string token = GenerateJwtToken(account.Username, userWithRole.Role.Name, account.AccountId);
 
 			return new BaseResponse<TokenModel>
@@ -186,6 +196,5 @@ namespace BusinessLayer.Service
 			return true;
 		}
 
-
-	}
+    }
 }

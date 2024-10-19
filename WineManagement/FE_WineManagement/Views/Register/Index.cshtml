@@ -1,0 +1,40 @@
+﻿@using BusinessLayer.Modal.Request
+
+@model RegisterModel
+
+@section Styles {
+    <link href="css/site.css" rel="stylesheet" />
+}
+@section Scripts {
+    <script src="controller/account.js" asp-append-version="true"></script>
+}
+<div class="container mt-5" style="
+    height: 100vh;
+">
+    <h2 class="text-center">Đăng Ký Tài Khoản</h2>
+   <div class="d-flex justify-content-center">
+        <form id="registerForm" class="sign-up-form login-container">
+            <div class="form-group">
+                <label for="username">Tên người dùng</label>
+                <input asp-for="@Model.Username" type="text" class="form-control" id="username" placeholder="User Name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input asp-for="@Model.Password" type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="roleId">Chức vụ</label>
+                <select id="roleId" class="form-control" required>
+                    <option selected disabled>Chọn chức vụ</option>
+                    <option value="1">Quản trị viên</option>
+                    <option value="2">Quản lý</option>
+                    <option value="3">Người dùng</option>
+                </select>
+            </div>
+            <input type="hidden" id="status" value="false" />
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Đăng Ký</button>
+            </div>
+        </form>
+   </div>
+</div>
