@@ -9,6 +9,9 @@ using DataLayer.Models;
 using System.Text;
 using System.Net.Http;
 using System.Reflection.Metadata;
+using static System.Net.Mime.MediaTypeNames;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace View_Wine.Controllers
 {
@@ -16,11 +19,14 @@ namespace View_Wine.Controllers
     {
         Uri _baseAddress = new Uri("http://localhost:5067/api");
         private readonly HttpClient _httpClient;
+        private readonly Cloudinary _cloudinary;
 
-        public WinesController()
+        public WinesController(Cloudinary cloudinary)
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = _baseAddress;
+            _cloudinary = cloudinary;
+
         }
 
         [HttpGet]
@@ -42,28 +48,147 @@ namespace View_Wine.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(WineModal modal)
+        public async Task<IActionResult> Create(WineModal modal)
         {
             try
             {
+                //Check img
+                if (modal.Image != null && modal.Image.Length > 0)
+                {
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(modal.Image.FileName, modal.Image.OpenReadStream()),
+                        UseFilename = true,
+                        UniqueFilename = true,
+                        Overwrite = true
+                    };
+
+                    //sync URL request and respond
+                    var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+                    //added
+                    modal.ImgUrl = uploadResult.SecureUrl.ToString();
+                }
+                //If img troll
+                if (modal.Image == null)
+                {
+                    TempData["errorMessage"] = "No image was uploaded.";
+                    return View();
+                }
+                //encryp data
                 string data = JsonConvert.SerializeObject(modal);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage responseMessage = _httpClient
-                    .PostAsync(_httpClient.BaseAddress + "/wine/createwine/create", content).Result;
+                HttpResponseMessage responseMessage = await _httpClient
+                    .PostAsync(_httpClient.BaseAddress + "/wine/createwine/create", content);
+
                 if (responseMessage.IsSuccessStatusCode)
                 {
+
                     TempData["successMessage"] = "Product Created";
                     return RedirectToAction("Index");
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 TempData["errorMessage"] = ex.Message;
-
                 return View();
+            }
+            return View();
+        }
 
+        [HttpGet]
+        public IActionResult Edit (int id)
+        {
+            WineModal modal = new WineModal();
+            HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
+            if (respond.IsSuccessStatusCode)
+            {
+                string data = respond.Content.ReadAsStringAsync().Result;
+                modal = JsonConvert.DeserializeObject<WineModal>(data);
+            }
+            return View(modal);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(WineModal modal)
+        {
+            try
+            {
+                //Check img
+                if (modal.Image != null && modal.Image.Length > 0)
+                {
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(modal.Image.FileName, modal.Image.OpenReadStream()),
+                        UseFilename = true,
+                        UniqueFilename = true,
+                        Overwrite = true
+                    };
+
+                    //sync URL request and respond
+                    var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+                    //added
+                    modal.ImgUrl = uploadResult.SecureUrl.ToString();
+                }
+                //If img troll
+                if (modal.Image == null)
+                {
+                    TempData["errorMessage"] = "No image was uploaded.";
+                    return View();
+                }
+                //encryp data
+                string data = JsonConvert.SerializeObject(modal);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+                HttpResponseMessage responseMessage =  _httpClient
+                    .PutAsync(_httpClient.BaseAddress + "/wine/updatewine/update/" + modal.WineId, content).Result;
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+
+                    TempData["successMessage"] = "Product Updated";
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+                return View();
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            WineModal modal = new WineModal();
+            HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
+            if (respond.IsSuccessStatusCode)
+            {
+                string data = respond.Content.ReadAsStringAsync().Result;
+                modal = JsonConvert.DeserializeObject<WineModal>(data);
+            }
+            return View(modal);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            try
+            {
+                HttpResponseMessage responseMessage = _httpClient
+                    .DeleteAsync(_httpClient.BaseAddress + "/wine/updatewine/update/" + id).Result;
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+
+                    TempData["successMessage"] = "Product Updated";
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = ex.Message;
+                return View();
             }
             return View();
         }
     }
-}
+}   

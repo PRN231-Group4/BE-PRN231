@@ -12,6 +12,7 @@
         public decimal AlcContent { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
-
+        public string? ImgUrl { get; set; }
+        public IFormFile Image {get; set;}
     }
 }

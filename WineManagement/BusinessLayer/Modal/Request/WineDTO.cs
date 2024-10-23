@@ -8,6 +8,7 @@ namespace BusinessLayer.Modal.Request
 {
     public class WineDTO
     {
+        public int WineId { get; set; }
         public string CategoryName { get; set; } = null!;
         public string Name { get; set; } = null!;
         public string? Origin { get; set; }
@@ -15,5 +16,7 @@ namespace BusinessLayer.Modal.Request
         public decimal? AlcContent { get; set; }
         public string? Description { get; set; }
         public string? Status { get; set; }
+        public string? ImgUrl { get; set; }
+
     }
 }

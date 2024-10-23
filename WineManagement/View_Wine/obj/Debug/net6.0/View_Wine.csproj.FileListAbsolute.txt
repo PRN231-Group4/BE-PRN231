@@ -297,3 +297,7 @@ D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\refint\Vi
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\View_Wine.pdb
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\View_Wine.genruntimeconfig.cache
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\ref\View_Wine.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\bin\Debug\net6.0\CloudinaryDotNet.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\View_Wine\bin\Debug\net6.0\System.Text.Json.dll

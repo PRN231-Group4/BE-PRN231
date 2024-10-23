@@ -32,6 +32,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.CategoryName)
             </th>
+            <td>
+                @Html.DisplayNameFor(model => model.ImgUrl)
+            </td>
             <th></th>
         </tr>
     </thead>
@@ -59,6 +62,9 @@
             <td>
                     @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
+                <td>
+                    <img src="@item.ImgUrl" alt="@item.Name" style="max-width: 100px; max-height: 100px;" />
+                </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.WineId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.WineId">Details</a> |

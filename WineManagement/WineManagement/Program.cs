@@ -10,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+//cloudiary
+//builder.Services.AddCloudinary();
 
 // Install AutoMapper
 //builder.Services.ConfigureAutoMapper();

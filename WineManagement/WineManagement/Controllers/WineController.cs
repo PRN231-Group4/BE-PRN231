@@ -17,7 +17,7 @@ namespace WineManagement.Controllers
             _wineService = wineService;
         }
 
-        [HttpPut("update")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateWine(int id, WineDTORespond dto)
         {
             try
@@ -66,7 +66,7 @@ namespace WineManagement.Controllers
 
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteWine(int id)
         {
             try
@@ -102,7 +102,7 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
-        [HttpGet("get-by-id")]
+        [HttpGet("get-by-id/{id}")]
         public async Task<IActionResult> GetWineById(int id)
         {
             try
