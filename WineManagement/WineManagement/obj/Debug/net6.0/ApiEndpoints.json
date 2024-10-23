@@ -517,6 +517,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WineManagement.Controllers.WineCheckController",
+    "Method": "GetAllWineCheck",
+    "RelativePath": "odata/winecheck",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineCheckController",
+    "Method": "CreateWineCheck",
+    "RelativePath": "odata/winecheck/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.WineCheckDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineCheckController",
+    "Method": "DeleteWineCheck",
+    "RelativePath": "odata/winecheck/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineCheckController",
+    "Method": "GetWineCheckById",
+    "RelativePath": "odata/winecheck/get-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WineManagement.Controllers.WineCheckController",
+    "Method": "UpdateWineCheck",
+    "RelativePath": "odata/winecheck/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLayer.Modal.Request.WineCheckDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WineManagement.Controllers.WineRequestController",
     "Method": "GetAllWineRequest",
     "RelativePath": "odata/winerequest",

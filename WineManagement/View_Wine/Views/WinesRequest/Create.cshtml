@@ -6,7 +6,7 @@
 
 <h1>Create</h1>
 
-<h4>Wine</h4>
+<h4>Wine Request</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -33,6 +33,11 @@
                 <span asp-validation-for="WineId" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="RequestDate" class="control-label"></label>
+                <input asp-for="RequestDate" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
@@ -42,8 +47,7 @@
                 <select asp-for="Status" class="form-control" asp-items="@(new SelectList(new List<SelectListItem>
     {
         new SelectListItem { Value = "Chưa xử lý", Text = "Chưa xử lý" },
-        new SelectListItem { Value = "Đang xử lý", Text = "Đang xử lý" },
-        new SelectListItem { Value = "Đã xử lý", Text = "Đã xử lý" }
+       
     }, "Value", "Text"))">
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>

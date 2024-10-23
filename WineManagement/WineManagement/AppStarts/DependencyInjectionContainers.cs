@@ -44,6 +44,9 @@ namespace WineManagement.AppStarts
             services.AddScoped<ISupplierRepository, SupplierRepository>();
             services.AddScoped<IWineRequestRepository, WineRequestRepository>();
             services.AddScoped<IWineRequestService, WineRequestService>();
+            services.AddScoped<IWineCheckRepository, WineCheckRepository>();
+            services.AddScoped<IWineCheckService, WineCheckService>();
+
 
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,8 @@ namespace BusinessLayer.Modal.Request
         public DateTime? RequestDate { get; set; }
         public string? Description { get; set; }
         public string? Status { get; set; }
+
+        
+        
     }
 }

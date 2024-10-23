@@ -29,8 +29,7 @@ namespace DataLayer.Models
         public virtual DbSet<WineTransaction> WineTransactions { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer(GetConnectionString());
+ => optionsBuilder.UseSqlServer(GetConnectionString());
         private string GetConnectionString()
         {
             IConfiguration config = new ConfigurationBuilder()
@@ -40,7 +39,6 @@ namespace DataLayer.Models
             var strConn = config["ConnectionStrings:DBDefault"];
             return strConn;
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
@@ -60,7 +58,7 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Accounts)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__Account__Role_Id__35BCFE0A");
+                    .HasConstraintName("FK__Account__Role_Id__48CFD27E");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -115,7 +113,7 @@ namespace DataLayer.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Wines)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Wine__Category_I__36B12243");
+                    .HasConstraintName("FK__Wine__Category_I__49C3F6B7");
             });
 
             modelBuilder.Entity<WineBatch>(entity =>
@@ -157,8 +155,6 @@ namespace DataLayer.Models
 
                 entity.Property(e => e.CheckId).HasColumnName("Check_Id");
 
-                entity.Property(e => e.BatchId).HasColumnName("Batch_Id");
-
                 entity.Property(e => e.CheckDate).HasColumnType("datetime");
 
                 entity.Property(e => e.Description).HasMaxLength(255);
@@ -174,11 +170,6 @@ namespace DataLayer.Models
                 entity.Property(e => e.Status).HasMaxLength(50);
 
                 entity.Property(e => e.WineId).HasColumnName("Wine_Id");
-
-                entity.HasOne(d => d.Batch)
-                    .WithMany(p => p.WineChecks)
-                    .HasForeignKey(d => d.BatchId)
-                    .HasConstraintName("FK__WineCheck__Batch__398D8EEE");
 
                 entity.HasOne(d => d.Inspector)
                     .WithMany(p => p.WineChecks)
@@ -231,7 +222,7 @@ namespace DataLayer.Models
             modelBuilder.Entity<WineStorageLocation>(entity =>
             {
                 entity.HasKey(e => e.LocationId)
-                    .HasName("PK__WineStor__D2BA00E27EAE0F89");
+                    .HasName("PK__WineStor__D2BA00E2DF8A2B25");
 
                 entity.ToTable("WineStorageLocation");
 

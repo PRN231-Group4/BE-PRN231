@@ -20,6 +20,8 @@ namespace WineManagement.AppStarts
                                                     .ForMember(dest => dest.Wine, opt => opt.Ignore());
 
             CreateMap<WineRequest, WineRequestCRUDDTO>().ReverseMap();
+            CreateMap<WineCheck, WineCheckDTO>().ReverseMap();
+
 
 
 

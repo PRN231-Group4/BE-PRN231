@@ -5,6 +5,7 @@ using DataLayer.Models;
 using DataLayer.Repository;
 using DataLayer.Repository.Interface;
 using DataLayer.UnitOfWork;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace BusinessLayer.Service
     public class WineRequestService : IWineRequestService
     {
         private readonly IWineRequestRepository _wineRequestRepo;
+        private readonly IWineCheckRepository _wineCheckRepository;
+
         private readonly ISupplierRepository _supplierRepository;
         private readonly IWineRepository _wineRepository;
 
@@ -23,40 +26,79 @@ namespace BusinessLayer.Service
         private readonly IMapper _mapper;
 
 
-        public WineRequestService(ISupplierRepository supplierRepository ,IWineRequestRepository wineRequestRepo, IMapper mapper, IWineRepository wineRepository)
+        public WineRequestService(IWineCheckRepository wineCheckRepository,ISupplierRepository supplierRepository ,IWineRequestRepository wineRequestRepo, IMapper mapper, IWineRepository wineRepository)
         {
             _wineRequestRepo = wineRequestRepo;
             _mapper = mapper;
             _supplierRepository = supplierRepository;
             _wineRepository = wineRepository;
+            _wineCheckRepository = wineCheckRepository;
         }
 
         public async Task<WineRequestCRUDDTO> Create(WineRequestCRUDDTO data)
         {
             try
             {
-                var map = _mapper.Map<WineRequest>(data);
-                var dataCreate = await _wineRequestRepo.Create(map);
-                var resutl = _mapper.Map<WineRequestCRUDDTO>(dataCreate);
-                return resutl;
+                // Ánh xạ từ DTO sang entity WineRequest
+                var wineRequest = _mapper.Map<WineRequest>(data);
+
+                // Tạo WineRequest
+                var wineRequestCreate = await _wineRequestRepo.Create(wineRequest);
+
+                // Tạo WineCheck từ WineRequest vừa tạo
+                var wineCheckDto = new WineCheckDTO
+                {
+                    RequestId = wineRequest.RequestId,
+                    CheckDate = wineRequest.RequestDate,
+                    Description = wineRequest.Description,
+                    ImageUrl = "",
+                    Status = "Pending", // hoặc bất kỳ trạng thái nào bạn muốn
+                    InspectorId = wineRequest.ManagerId,
+                    Quantity = wineRequest.Quantity,
+                    WineId = wineRequest.WineId
+                };
+
+                // Tạo WineCheck
+                var wineCheck = _mapper.Map<WineCheck>(wineCheckDto);
+                var wineCheckCreate = await _wineCheckRepository.Create(wineCheck);
+
+                // Ánh xạ lại kết quả thành DTO
+                var result = _mapper.Map<WineRequestCRUDDTO>(wineRequestCreate);
+
+                return result;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                // Xử lý lỗi nếu một trong các bước không thành công
+                throw new Exception("Lỗi khi tạo WineRequest và WineCheck: " + ex.Message);
             }
         }
+
+
 
         public async Task<bool> Delete(int id)
         {
             try
             {
-                var data = await _wineRequestRepo.GetById(id);
-                if (data == null)
+                // Lấy WineRequest theo id
+                var wineRequest = await _wineRequestRepo.GetById(id);
+                if (wineRequest == null)
                 {
                     throw new Exception($"Data {id} does not exist");
                 }
 
-                await _wineRequestRepo.Delete(data);
+                // Lấy danh sách WineCheck liên quan tới WineRequest
+                var wineChecks = await _wineCheckRepository.GetByRequest(id);
+
+                // Xóa từng WineCheck
+                foreach (var wineCheck in wineChecks)
+                {
+                    await _wineCheckRepository.Delete(wineCheck);
+                }
+
+                // Xóa WineRequest
+                await _wineRequestRepo.Delete(wineRequest);
+
                 return true;
             }
             catch (Exception ex)
@@ -64,6 +106,7 @@ namespace BusinessLayer.Service
                 throw new Exception(ex.Message);
             }
         }
+
 
         public async Task<List<WineRequestDTO>> GetAll()
         {

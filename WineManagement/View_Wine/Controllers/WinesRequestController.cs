@@ -37,7 +37,6 @@ namespace View_Wine.Controllers
                 Wine = w.Wine,
                 WineId = w.WineId,
                 Quantity = w.Quantity,
-                RequestDate = w.RequestDate,
                 Description = w.Description,
                 Status = w.Status,
             }).ToList(); // Ensure you convert to a List
@@ -121,54 +120,166 @@ namespace View_Wine.Controllers
 
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            WineRequestDTO wineRequest = null;
-
-            HttpResponseMessage response = _httpClient.GetAsync(_baseAddress + $"/winerequest/{id}").Result;
-            if (response.IsSuccessStatusCode)
+            try
             {
-                string data = response.Content.ReadAsStringAsync().Result;
-                wineRequest = JsonConvert.DeserializeObject<WineRequestDTO>(data);
-            }
+                // Lấy chi tiết của WineRequest theo id
+                var wineRequestResponse = await _httpClient.GetAsync($"{_baseAddress}/winerequest/get-by-id?id={id}");
+                if (!wineRequestResponse.IsSuccessStatusCode)
+                {
+                    return NotFound();
+                }
 
-            return View(wineRequest); // Hiển thị form với dữ liệu của WineRequest cần chỉnh sửa
+                var wineRequestData = await wineRequestResponse.Content.ReadAsStringAsync();
+                var wineRequestDto = JsonConvert.DeserializeObject<WineRequestDTO>(wineRequestData);
+
+                if (wineRequestDto == null)
+                {
+                    return NotFound();
+                }
+
+                // Chuyển đổi từ WineRequestDTO sang WineRequestEditViewModal
+                var wineRequestEditViewModel = new WineRequestModal
+                {
+                    RequestId = wineRequestDto.RequestId,
+                    SupplierId = wineRequestDto.SupplierId,
+                    WineId = wineRequestDto.WineId,
+                    ManagerId = wineRequestDto.ManagerId,
+                    Quantity = wineRequestDto.Quantity,
+                    Status = wineRequestDto.Status,
+                    Description = wineRequestDto.Description,
+                    RequestDate = wineRequestDto.RequestDate 
+                };
+
+                // Lấy danh sách Supplier
+                var supplierResponse = await _httpClient.GetAsync(_baseAddress + "/supplier");
+                var supplierData = await supplierResponse.Content.ReadAsStringAsync();
+                var suppliers = JsonConvert.DeserializeObject<List<Supplier>>(supplierData);
+                ViewBag.SupplierList = new SelectList(suppliers, "SupplierId", "Name", wineRequestDto.SupplierId);
+
+                // Lấy danh sách Wine
+                var wineResponse = await _httpClient.GetAsync(_baseAddress + "/wine/getallwine");
+                var wineData = await wineResponse.Content.ReadAsStringAsync();
+                var wines = JsonConvert.DeserializeObject<List<Wine>>(wineData);
+                ViewBag.WineList = new SelectList(wines, "WineId", "Name", wineRequestDto.WineId);
+
+                // Lấy danh sách Staff (Manager)
+                var staffResponse = await _httpClient.GetAsync(_baseAddress + "/winerequest/all-staff");
+                var staffData = await staffResponse.Content.ReadAsStringAsync();
+                var staffs = JsonConvert.DeserializeObject<List<Account>>(staffData);
+                ViewBag.StaffList = new SelectList(staffs, "AccountId", "Username", wineRequestDto.ManagerId);
+
+                return View(wineRequestEditViewModel); // Truyền đối tượng wineRequestEditViewModel cho view
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpPut]
-        public IActionResult Edit(WineRequestDTO wineRequestDto)
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(WineRequestDTO wineRequestDto)
         {
             if (ModelState.IsValid)
             {
-                // Gửi yêu cầu PUT để cập nhật WineRequest
-                var putTask = _httpClient.PutAsJsonAsync(_baseAddress + $"/winerequest/{wineRequestDto.RequestId}", wineRequestDto);
-                putTask.Wait();
-
-                var result = putTask.Result;
-                if (result.IsSuccessStatusCode)
+                try
                 {
-                    return RedirectToAction("Index"); // Sau khi cập nhật thành công, quay lại danh sách
+                    // Tạo URL cho API update
+                    var updateUrl = $"http://localhost:5067/odata/winerequest/update?id={wineRequestDto.RequestId}";
+
+                    // Gửi yêu cầu PUT để cập nhật WineRequest
+                    var response = await _httpClient.PutAsJsonAsync(updateUrl, wineRequestDto);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Nếu thành công, chuyển hướng về trang Index
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        // Lấy thông tin lỗi từ response và hiển thị cho người dùng
+                        var errorContent = await response.Content.ReadAsStringAsync();
+                        ModelState.AddModelError(string.Empty, $"Error from API: {errorContent}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi ngoại lệ
+                    ModelState.AddModelError(string.Empty, $"An error occurred: {ex.Message}");
                 }
             }
 
-            return View(wineRequestDto); // Nếu có lỗi, hiển thị lại form với dữ liệu hiện tại
+            // Nếu có lỗi hoặc ModelState không hợp lệ, trả về view với dữ liệu hiện tại
+            return View(wineRequestDto);
         }
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            // Gửi yêu cầu đến API để xóa WineRequest
-            var deleteTask = _httpClient.DeleteAsync(_baseAddress + $"/winerequest/{id}");
-            deleteTask.Wait();
 
-            var result = deleteTask.Result;
-            if (result.IsSuccessStatusCode)
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id,int ms)
+        {
+            var response = await _httpClient.GetAsync(_baseAddress + $"/winerequest/get-by-id?id={id}");
+
+            // Kiểm tra xem yêu cầu có thành công không
+            if (!response.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index"); // Sau khi xóa thành công, quay lại danh sách
+                return NotFound();
             }
 
-            // Nếu có lỗi, có thể hiển thị một trang thông báo lỗi
-            return RedirectToAction("Index");
+            var data = await response.Content.ReadAsStringAsync();
+
+            // Giả sử bạn cần deserialize dữ liệu về WineRequest
+            var wineRequest = JsonConvert.DeserializeObject<WineRequestDTO>(data);
+
+            if (wineRequest == null)
+            {
+                return NotFound();
+            }
+
+            return View(wineRequest); // Truyền đối tượng đơn cho view
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var response = await _httpClient.GetAsync(_baseAddress + $"/winerequest/get-by-id?id={id}");
+
+            // Kiểm tra xem yêu cầu có thành công không
+            if (!response.IsSuccessStatusCode)
+            {
+                return NotFound();
+            }
+
+            var data = await response.Content.ReadAsStringAsync();
+
+            // Giả sử bạn cần deserialize dữ liệu về WineRequest
+            var wineRequest = JsonConvert.DeserializeObject<WineRequestDTO>(data);
+
+            if (wineRequest == null)
+            {
+                return NotFound();
+            }
+
+            return View(wineRequest); // Truyền đối tượng đơn cho view
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await _httpClient.DeleteAsync(_baseAddress +$"/winerequest/delete?id={id}"); // Gọi API
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index"); // Quay lại danh sách sau khi xóa thành công
+            }
+
+            // Xử lý lỗi nếu có
+            return RedirectToAction("Index"); // Hoặc bạn có thể trả về một trang thông báo lỗi
+        }
+
+
     }
 }
