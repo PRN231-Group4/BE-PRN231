@@ -18,12 +18,52 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Category/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Role/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Role/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Role/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Role/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Shared/Error.cshtml]
@@ -34,8 +74,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Supplier/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Supplier/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Supplier/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/WineBatch/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZUJhdGNoXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/WineBatch/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZUJhdGNoXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/WineBatch/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZUJhdGNoXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/WineBatch/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2luZUJhdGNoXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/WORKSPACE/resolveConflict/BE-PRN231/WineManagement/View_Wine/Views/WineBatch/Index.cshtml]

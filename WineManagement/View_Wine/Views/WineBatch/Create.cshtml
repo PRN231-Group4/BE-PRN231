@@ -6,7 +6,7 @@
 
 <h1>Create</h1>
 
-<h4>Wine Request</h4>
+<h4>Wine Batch</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -47,7 +47,8 @@
                 <label asp-for="Status" class="control-label"></label>
                 <select asp-for="Status" class="form-control" asp-items="@(new SelectList(new List<SelectListItem>
     {
-        new SelectListItem { Value = "Còn hàng", Text = "Còn hàng" },
+        new SelectListItem { Value = "In Stock", Text = "In Stock" },
+        new SelectListItem { Value = "Out Of Stock", Text = "Out Of Stock" }
                            
 
     }, "Value", "Text"))">

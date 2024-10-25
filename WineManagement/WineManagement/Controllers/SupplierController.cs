@@ -20,7 +20,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateSupplier(int id, SupplierDTO dto)
         {
@@ -51,7 +51,7 @@ namespace WineManagement.Controllers
             }
         }
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateSupplier(SupplierDTO dto)
         {
@@ -72,7 +72,7 @@ namespace WineManagement.Controllers
 
         }
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteSupplier(int id)
         {
@@ -114,7 +114,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetSupplierById(int id)
         {

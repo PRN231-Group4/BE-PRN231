@@ -64,11 +64,7 @@ builder.Services.AddSwaggerGen(options =>
 //DependencyInjection
 builder.Services.AddWebAPIService();
 
-//DBcontext
-builder.Services.AddDbContext<WineManagementSystemContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBDefault"));
-});
+
 
 
 //odata
