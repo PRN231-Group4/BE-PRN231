@@ -20,7 +20,7 @@ namespace WineManagement.Controllers
 
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateWineBatch(int id, WineBatchDTO dto)
         {
@@ -52,7 +52,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateWineBatch(WineBatchDTO dto)
         {
@@ -74,7 +74,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
 
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteWineBatch(int id)
@@ -96,7 +96,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllWineBatch()
         {
@@ -118,7 +118,7 @@ namespace WineManagement.Controllers
 
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetWineBatchById(int id)
         {

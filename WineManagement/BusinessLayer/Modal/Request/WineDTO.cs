@@ -8,6 +8,7 @@ namespace BusinessLayer.Modal.Request
 {
     public class WineDTO
     {
+        public int WineId { get; set; }
         public int? CategoryId { get; set; }
         public string Name { get; set; } = null!;
         public string? Origin { get; set; }

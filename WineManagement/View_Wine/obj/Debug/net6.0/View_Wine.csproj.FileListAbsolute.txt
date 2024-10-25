@@ -596,3 +596,4 @@ E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0
 E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\View_Wine.pdb
 E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\View_Wine.genruntimeconfig.cache
 E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine\obj\Debug\net6.0\ref\View_Wine.dll
+E:\WORKSPACE\resolveConflict\BE-PRN231\WineManagement\View_Wine\bin\Debug\net6.0\System.Formats.Asn1.dll

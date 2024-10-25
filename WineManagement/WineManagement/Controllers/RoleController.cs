@@ -20,7 +20,7 @@ namespace WineManagement.Controllers
 
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateRole(int id, RoleDTO dto)
         {
@@ -52,7 +52,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateRole(RoleDTO dto)
         {
@@ -75,7 +75,7 @@ namespace WineManagement.Controllers
 
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteRole(int id)
         {
@@ -96,7 +96,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet]
         public async Task<IActionResult> GetAllRole()
         {
@@ -117,7 +117,7 @@ namespace WineManagement.Controllers
         }
 
         [EnableQuery]
-        [Authorize(Roles = "Staff")]
+        //[Authorize(Roles = "Staff")]
         [HttpGet("get-by-id")]
         public async Task<IActionResult> GetRoleById(int id)
         {

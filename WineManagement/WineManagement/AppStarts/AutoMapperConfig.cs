@@ -15,6 +15,13 @@ namespace WineManagement.AppStarts
             CreateMap<CategoryDTO, Category>().ReverseMap();
             CreateMap<RoleDTO, Role>().ReverseMap();
             CreateMap<SupplierDTO, Supplier>().ReverseMap();
+            CreateMap<WineRequest, WineRequestDTO>().ForMember(dest => dest.SupplierName, opt => opt.Ignore())
+                                                    .ForMember(dest => dest.ManagerName, opt => opt.Ignore())
+                                                    .ForMember(dest => dest.Wine, opt => opt.Ignore());
+
+            CreateMap<WineRequest, WineRequestCRUDDTO>().ReverseMap();
+            CreateMap<WineCheck, WineCheckDTO>().ReverseMap();
+
 
 
 
