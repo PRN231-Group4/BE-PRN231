@@ -8,7 +8,7 @@ namespace BusinessLayer.Modal.Response
 {
     public class WineDTORespond
     {
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public string Name { get; set; } = null!;
         public string? Origin { get; set; }
         public decimal? Volume { get; set; }

@@ -17,7 +17,7 @@ namespace View_Wine.Controllers
 {
     public class WinesController : Controller
     {
-        Uri _baseAddress = new Uri("http://localhost:5067/api");
+        Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
         private readonly Cloudinary _cloudinary;
 
@@ -44,7 +44,7 @@ namespace View_Wine.Controllers
 
         [HttpGet]
         public IActionResult Create()
-        {    
+        {
             return View();
         }
         [HttpPost]
@@ -96,7 +96,7 @@ namespace View_Wine.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit (int id)
+        public IActionResult Edit(int id)
         {
             WineModal modal = new WineModal();
             HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
@@ -138,7 +138,7 @@ namespace View_Wine.Controllers
                 //encryp data
                 string data = JsonConvert.SerializeObject(modal);
                 StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
-                HttpResponseMessage responseMessage =  _httpClient
+                HttpResponseMessage responseMessage = _httpClient
                     .PutAsync(_httpClient.BaseAddress + "/wine/updatewine/update/" + modal.WineId, content).Result;
 
                 if (responseMessage.IsSuccessStatusCode)
@@ -191,4 +191,4 @@ namespace View_Wine.Controllers
             return View();
         }
     }
-}   
+}

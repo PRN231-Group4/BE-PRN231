@@ -1100,3 +1100,8 @@ D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\refi
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\WineManagement.pdb
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\WineManagement.genruntimeconfig.cache
 D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\obj\Debug\net6.0\ref\WineManagement.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.AspNetCore.OData.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.Core.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.Edm.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.OData.ModelBuilder.dll
+D:\FPT\HK8\PRN_231\BE-PRN231\WineManagement\WineManagement\bin\Debug\net6.0\Microsoft.Spatial.dll

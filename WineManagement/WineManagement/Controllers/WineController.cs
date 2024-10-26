@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WineManagement.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("odata/[controller]/[action]")]
     [ApiController]
     public class WineController : ControllerBase
     {
