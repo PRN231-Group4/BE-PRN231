@@ -26,14 +26,23 @@ namespace DataLayer.Repository
 
         public async Task<bool> Delete(Wine data)
         {
-            _context.Remove(data);
-            await _context.SaveChangesAsync();
-            return true;
+            try
+            {
+                _context.Remove(data);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Ghi lại chi tiết lỗi
+                Console.WriteLine(ex.InnerException?.Message ?? ex.Message);
+                throw; // Có thể ném lại hoặc xử lý theo cách khác
+            }
         }
 
         public async Task<List<Wine>> GetAll()
         {
-            var data = await _context.Wines.ToListAsync();
+            var data = await _context.Wines.Include(x=>x.Category).ToListAsync();
             return data;
         }
 

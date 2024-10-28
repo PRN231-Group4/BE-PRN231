@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Modal.Request;
+using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,8 +17,8 @@ namespace WineManagement.Controllers
             _wineService = wineService;
         }
 
-        [HttpPut("update")]
-        public async Task<IActionResult> UpdateWine(int id, WineDTO dto)
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> UpdateWine(int id, WineDTORespond dto)
         {
             try
             {
@@ -46,7 +47,7 @@ namespace WineManagement.Controllers
             }
         }
         [HttpPost("create")]
-        public async Task<IActionResult> CreateWine(WineDTO dto)
+        public async Task<IActionResult> CreateWine(WineDTORespond dto)
         {
             try
             {
@@ -65,7 +66,7 @@ namespace WineManagement.Controllers
 
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteWine(int id)
         {
             try
@@ -101,7 +102,7 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
-        [HttpGet("get-by-id")]
+        [HttpGet("get-by-id/{id}")]
         public async Task<IActionResult> GetWineById(int id)
         {
             try
