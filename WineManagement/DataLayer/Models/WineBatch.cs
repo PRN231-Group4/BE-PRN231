@@ -7,7 +7,6 @@ namespace DataLayer.Models
     {
         public WineBatch()
         {
-            WineChecks = new HashSet<WineCheck>();
             WineTransactions = new HashSet<WineTransaction>();
         }
 
@@ -22,7 +21,6 @@ namespace DataLayer.Models
 
         public virtual WineRequest? Request { get; set; }
         public virtual Wine? Wine { get; set; }
-        public virtual ICollection<WineCheck> WineChecks { get; set; }
         public virtual ICollection<WineTransaction> WineTransactions { get; set; }
     }
 }

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BusinessLayer.Modal.Request.WineCheckDTO>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<a asp-action="Create">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestId)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.InspectorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequestId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InspectorId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WineId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CheckId">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.RequestId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

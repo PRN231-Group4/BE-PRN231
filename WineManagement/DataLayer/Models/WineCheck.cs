@@ -7,7 +7,6 @@ namespace DataLayer.Models
     {
         public int CheckId { get; set; }
         public int? RequestId { get; set; }
-        public int? BatchId { get; set; }
         public int? InspectorId { get; set; }
         public int? WineId { get; set; }
         public int? Quantity { get; set; }
@@ -16,7 +15,6 @@ namespace DataLayer.Models
         public string? Description { get; set; }
         public string? ImageUrl { get; set; }
 
-        public virtual WineBatch? Batch { get; set; }
         public virtual Account? Inspector { get; set; }
         public virtual WineRequest? Request { get; set; }
         public virtual Wine? Wine { get; set; }
