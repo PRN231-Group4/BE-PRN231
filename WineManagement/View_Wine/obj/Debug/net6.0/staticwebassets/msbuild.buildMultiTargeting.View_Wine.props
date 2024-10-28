@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\View_Wine.props" />
-</Project>

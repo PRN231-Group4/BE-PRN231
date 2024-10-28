@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\FE_MVC_WineManagement.props" />
-</Project>
