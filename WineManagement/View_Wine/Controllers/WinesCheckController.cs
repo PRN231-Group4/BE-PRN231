@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Modal.Request;
 using DataLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -7,6 +8,8 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
+    [Authorize(Policy = "ManagerOrStaff")]
+
     public class WinesCheckController : Controller
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
@@ -35,7 +38,7 @@ namespace View_Wine.Controllers
                 CheckId = w.CheckId,
                 RequestId = w.RequestId,
                 InspectorId = w.InspectorId,
-                WineId = w.WineId,
+                wineName = w.wineName,
                 Quantity = w.Quantity,
                 Status = w.Status,
                 Description = w.Description,

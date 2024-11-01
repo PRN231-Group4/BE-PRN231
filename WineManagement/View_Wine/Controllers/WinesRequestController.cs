@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Modal.Request;
 using DataLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -7,6 +8,8 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
+    [Authorize(Roles = "Manager")]
+
     public class WinesRequestController : Controller
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
@@ -34,10 +37,8 @@ namespace View_Wine.Controllers
                 RequestId = w.RequestId,
                 SupplierName = w.SupplierName,
                 ManagerName = w.ManagerName,
-                Wine = w.Wine,
-                WineId = w.WineId,
-                Quantity = w.Quantity,
                 Description = w.Description,
+                
                 Status = w.Status,
             }).ToList(); // Ensure you convert to a List
 
@@ -93,12 +94,25 @@ namespace View_Wine.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        // POST: Create
         [HttpPost]
-        public async Task<IActionResult> Create(WineRequestDTO wineRequestDto)
+        public async Task<IActionResult> Create(WineRequestCRUDDTO wineRequestDto)
         {
             if (ModelState.IsValid)
             {
+                var apiRequest = new WineRequestCRUDDTO
+                {
+                    SupplierId = wineRequestDto.SupplierId,
+                    ManagerId = wineRequestDto.ManagerId,
+                    RequestDate = wineRequestDto.RequestDate,
+                    Description = wineRequestDto.Description,
+                    Status = wineRequestDto.Status,
+                    WineItems = wineRequestDto.WineItems.Select(item => new WineRequestItemDTO
+                    {
+                        WineId = item.WineId,
+                        Quantity = item.Quantity
+                    }).ToList() // Chuyển đổi danh sách WineItems sang danh sách DTO
+                };
                 // Gửi yêu cầu đến API để tạo WineRequest mới
                 var response = await _httpClient.PostAsJsonAsync(_baseAddress + "/winerequest/create", wineRequestDto);
 
@@ -144,9 +158,7 @@ namespace View_Wine.Controllers
                 {
                     RequestId = wineRequestDto.RequestId,
                     SupplierId = wineRequestDto.SupplierId,
-                    WineId = wineRequestDto.WineId,
                     ManagerId = wineRequestDto.ManagerId,
-                    Quantity = wineRequestDto.Quantity,
                     Status = wineRequestDto.Status,
                     Description = wineRequestDto.Description,
                     RequestDate = wineRequestDto.RequestDate 

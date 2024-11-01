@@ -26,6 +26,8 @@ namespace WineManagement.AppStarts
 
             CreateMap<WineRequest, WineRequestCRUDDTO>().ReverseMap();
             CreateMap<WineCheck, WineCheckDTO>().ReverseMap();
+            CreateMap<Wine, WineCheckDTO>()
+    .ForMember(dest => dest.wineName, opt => opt.MapFrom(src => src.Name)); // Đảm bảo ánh xạ đúng
 
 
 

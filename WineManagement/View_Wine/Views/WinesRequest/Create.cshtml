@@ -1,7 +1,18 @@
-﻿@model BusinessLayer.Modal.Request.WineRequestDTO
+﻿@model View_Wine.Models.WineRequestModal
 
 @{
     ViewData["Title"] = "Create";
+    var wineOptions = string.Empty;
+
+    if (ViewBag.WineList != null)
+    {
+        wineOptions = string.Join("", ((SelectList)ViewBag.WineList).Select(item =>
+            $"<option value='{item.Value}'>{item.Text}</option>"));
+    }
+    else
+    {
+        wineOptions = "<option value=''>Không có rượu nào</option>";
+    }
 }
 
 <h1>Create</h1>
@@ -9,9 +20,10 @@
 <h4>Wine Request</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="SupplierId" class="control-label">Supplier</label>
                 <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.SupplierList"></select>
@@ -23,35 +35,34 @@
                 <span asp-validation-for="ManagerId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="WineId" class="control-label">Wine</label>
-                <select asp-for="WineId" class="form-control" asp-items="ViewBag.WineList"></select>
-                <span asp-validation-for="WineId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RequestDate" class="control-label"></label>
+                <label asp-for="RequestDate" class="control-label">Request Date</label>
                 <input asp-for="RequestDate" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <span asp-validation-for="RequestDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+                <label asp-for="Description" class="control-label">Description</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
+                <label asp-for="Status" class="control-label">Status</label>
                 <select asp-for="Status" class="form-control" asp-items="@(new SelectList(new List<SelectListItem>
-    {
-        new SelectListItem { Value = "Chưa xử lý", Text = "Chưa xử lý" },
-       
-    }, "Value", "Text"))">
+                {
+                    new SelectListItem { Value = "Chưa xử lý", Text = "Chưa xử lý" },
+                    new SelectListItem { Value = "Đã xử lý", Text = "Đã xử lý" }
+                }, "Value", "Text"))">
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
+
+            <!-- Container cho các input mới -->
+            <div id="inputContainer"></div>
+
+            <!-- Nút để thêm rượu -->
+            <div class="form-group">
+                <button type="button" id="addWineButton" class="btn btn-secondary">Thêm Rượu</button>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -64,5 +75,39 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        let wineIndex = 0; // Khởi tạo chỉ số cho các mục rượu
+
+        document.getElementById('addWineButton').addEventListener('click', function () {
+            const inputContainer = document.getElementById('inputContainer');
+
+            // Tạo một nhóm input mới
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group mb-2';
+
+            // Tạo dropdown cho tên rượu
+            const wineSelect = document.createElement('select');
+            wineSelect.className = 'form-control';
+            wineSelect.name = `WineItems[${wineIndex}].WineId`; // Sử dụng chỉ số để định danh
+            wineSelect.innerHTML = `@Html.Raw(wineOptions)`; // Gán danh sách từ ViewBag
+
+            // Tạo input cho số lượng
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.placeholder = 'Số Lượng';
+            quantityInput.className = 'form-control';
+            quantityInput.name = `WineItems[${wineIndex}].Quantity`; // Sử dụng chỉ số để định danh
+
+            // Thêm các input vào nhóm
+            inputGroup.appendChild(wineSelect);
+            inputGroup.appendChild(quantityInput);
+
+            // Thêm nhóm input vào container
+            inputContainer.appendChild(inputGroup);
+            wineIndex++; // Tăng chỉ số cho lần thêm tiếp theo
+        });
+    </script>
 }
