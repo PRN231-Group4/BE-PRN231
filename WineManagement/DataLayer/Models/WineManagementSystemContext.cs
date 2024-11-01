@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 namespace DataLayer.Models
 {
@@ -29,16 +28,14 @@ namespace DataLayer.Models
         public virtual DbSet<WineTransaction> WineTransactions { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
- => optionsBuilder.UseSqlServer(GetConnectionString());
-        private string GetConnectionString()
         {
-            IConfiguration config = new ConfigurationBuilder()
-             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", true, true)
-            .Build();
-            var strConn = config["ConnectionStrings:DBDefault"];
-            return strConn;
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=localhost;Database=WineManagementSystem;Uid=sa;Pwd=123;TrustServerCertificate=True");
+            }
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
@@ -101,10 +98,6 @@ namespace DataLayer.Models
                 entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
 
                 entity.Property(e => e.Description).HasMaxLength(255);
-
-                entity.Property(e => e.ImgUrl)
-                    .HasColumnType("text")
-                    .HasColumnName("imgURL");
 
                 entity.Property(e => e.Name).HasMaxLength(100);
 

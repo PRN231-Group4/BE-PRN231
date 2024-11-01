@@ -2,6 +2,7 @@
 using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
 using DataLayer.Models;
+using DataLayer.Repository;
 using DataLayer.Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace BusinessLayer.Service
     public class WineCheckService : IWineCheckService
     {
         private readonly IWineCheckRepository _wineCheckRepository;
+        private readonly IWineRepository _wineRepository;
         private readonly IMapper _mapper;
 
-        public WineCheckService(IWineCheckRepository wineCheckRepository, IMapper mapper)
+        public WineCheckService(IWineCheckRepository wineCheckRepository, IMapper mapper, IWineRepository wineRepository)
         {
+            _wineRepository = wineRepository;
             _wineCheckRepository = wineCheckRepository;
             _mapper = mapper;
         }
@@ -63,8 +66,22 @@ namespace BusinessLayer.Service
 
                 var data = await _wineCheckRepository.GetAll();
                 var map = _mapper.Map<List<WineCheckDTO>>(data);
-                return map;
+                foreach (var wine in map)
+                {
+                    // Giả sử bạn có phương thức GetById trong repository
+                    var wineDetails = await _wineRepository.GetById((int)wine.WineId);
 
+                    // Kiểm tra wineDetails có khác null không và gán wineName
+                    if (wineDetails != null)
+                    {
+                        wine.wineName = wineDetails.Name; // Gán tên rượu từ thông tin chi tiết
+                    }
+                    else
+                    {
+                        wine.wineName = "Unknown wineName"; // Gán giá trị mặc định nếu không tìm thấy
+                    }
+                }
+                return map;
             }
             catch (Exception ex)
             {

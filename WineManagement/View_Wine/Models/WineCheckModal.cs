@@ -6,6 +6,8 @@ namespace View_Wine.Models
         public int CheckId { get; set; }
         public int? RequestId { get; set; }
         public int? InspectorId { get; set; }
+        public string? wineName { get; set; }
+
         public int? WineId { get; set; }
         public int? Quantity { get; set; }
         public string? Status { get; set; }
