@@ -1,25 +1,31 @@
-﻿using BusinessLayer.Modal.Request;
+﻿using AutoMapper;
+using BusinessLayer.Modal.Request;
 using DataLayer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Net.Http;
 using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-    [Authorize(Roles = "Manager")]
 
     public class WinesRequestController : Controller
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
+        private readonly IMapper _mapper;
 
-        public WinesRequestController()
+
+        public WinesRequestController(IHttpClientFactory httpClientFactory, IMapper mapper)
         {
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = _baseAddress;
+            // Sử dụng IHttpClientFactory để lấy HttpClient
+            _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:5067/odata");
+            _mapper = mapper;
         }
+
 
         [HttpGet]
         public IActionResult Index()
@@ -226,7 +232,8 @@ namespace View_Wine.Controllers
             }
 
             // Nếu có lỗi hoặc ModelState không hợp lệ, trả về view với dữ liệu hiện tại
-            return View(wineRequestDto);
+            var wineRequestModal = _mapper.Map<WineRequestModal>(wineRequestDto);
+            return View(wineRequestModal);
         }
 
 

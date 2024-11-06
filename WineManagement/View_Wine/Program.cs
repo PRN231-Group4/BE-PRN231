@@ -1,9 +1,11 @@
 ﻿using DataLayer.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
+using View_Wine.AppStart;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,12 +20,19 @@ builder.Services.AddSession(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddCloudinary();
-
+builder.Services.AddHttpClient();
 //DBcontext
 builder.Services.AddDbContext<WineManagementSystemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBDefault"));
 });
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+       .AddCookie(options =>
+       {
+           options.LoginPath = "/";
+           options.LogoutPath = "/Home/Logout"; // Đường dẫn đến trang đăng xuất
+       });
+builder.Services.AddAutoMapper(typeof(AutoMap).Assembly);
 
 // Cấu hình dịch vụ xác thực JWT
 builder.Services.AddAuthentication(options =>

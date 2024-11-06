@@ -4,31 +4,95 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h4 {
+            color: #343a40;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        dl.row {
+            margin-bottom: 20px;
+        }
+        dt {
+            font-weight: bold;
+            color: #495057;
+        }
+        dd {
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-<div>
-    <h4>Role</h4>
+    <div class="container">
+        <h1>Chi Tiết Vai Trò</h1>
 
-    <hr />
-    <dl class="row">
+        <h4>Thông Tin Vai Trò</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.RoleId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.RoleId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+        </dl>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.RoleId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.RoleId)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-       
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.RoleId" class="btn">Edit</a>
+            <a asp-action="Index" class="back-link">Quay lại danh sách</a>
+        </div>
+    </div>
 
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.RoleId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+</body>
+</html>

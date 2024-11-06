@@ -21,7 +21,7 @@ namespace BusinessLayer.Modal.Request
         public string? Description { get; set; }
         public string? Status { get; set; }
 
-        public List<WineRequestItemDTO> WineItems { get; set; } // Danh sách các loại rượu và số lượng
+        public List<WineRequestItemDTO>? WineItems { get; set; } // Danh sách các loại rượu và số lượng
 
     }
 }

@@ -5,8 +5,8 @@ namespace View_Wine.Models
 
     public class WineRequestItemModal
     {
-        public int WineId { get; set; }
-        public int Quantity { get; set; } // Số lượng cho từng loại rượu
+        public int? WineId { get; set; }
+        public int? Quantity { get; set; } // Số lượng cho từng loại rượu
     }
     public class WineRequestModal
     {
@@ -21,7 +21,7 @@ namespace View_Wine.Models
         public string Wine { get; set; }
         public string ManagerName { get; set; }
 
-        public List<WineRequestItemModal> WineItems { get; set; } // Danh sách các loại rượu và số lượng
+        public List<WineRequestItemModal>? WineItems { get; set; } // Danh sách các loại rượu và số lượng
         public SelectList SupplierList { get; set; }
         public SelectList WineList { get; set; }
         public SelectList StaffList { get; set; }

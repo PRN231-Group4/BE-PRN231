@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Modal.Request;
+﻿using BusinessLayer.Modal;
+using BusinessLayer.Modal.Request;
 using BusinessLayer.Modal.Response;
 using DataLayer.Models;
 using System;
@@ -11,6 +12,7 @@ namespace BusinessLayer.Service.Interface
 {
     public interface IWineService
     {
+        Task<bool> UpdateStatusFailed(int id, WineDTOStatus data);
         public Task<List<WineDTO>> GetAll();
         public Task<WineDTORespond> Create(WineDTORespond data);
         Task<bool> Update(int id, WineDTORespond data);

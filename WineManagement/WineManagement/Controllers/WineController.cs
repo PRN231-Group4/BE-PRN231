@@ -1,20 +1,52 @@
-﻿using BusinessLayer.Modal.Request;
+﻿using BusinessLayer.Modal;
+using BusinessLayer.Modal.Request;
 using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace WineManagement.Controllers
 {
     [Route("odata/[controller]/[action]")]
     [ApiController]
-    public class WineController : ControllerBase
+    public class WineController : ODataController
     {
         private readonly IWineService _wineService;
 
         public WineController(IWineService wineService)
         {
             _wineService = wineService;
+        }
+        [HttpPut("update-status/{id}")]
+        public async Task<IActionResult> UpdateWineStatusFailed(int id, WineDTOStatus dto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                bool isUpdated = await _wineService.UpdateStatusFailed(id, dto);
+
+                if (isUpdated)
+                {
+                    // Return a success response
+                    return Ok();
+                }
+                else
+                {
+                    // Return a not found response if the service was not updated successfully
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Return a bad request response for any other exceptions
+                return BadRequest();
+            }
         }
 
         [HttpPut("update/{id}")]
@@ -84,6 +116,7 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+        [EnableQuery]
         [HttpGet]
         public async Task<IActionResult> GetAllWine()
         {

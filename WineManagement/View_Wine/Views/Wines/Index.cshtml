@@ -1,76 +1,139 @@
 ﻿@model IEnumerable<View_Wine.Models.WineModal>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<style>
+    body {
+        background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+    .create-link {
+        display: block; /* Hiển thị dưới dạng khối */
+        text-align: center; /* Căn giữa */
+        margin-bottom: 20px; /* Khoảng cách dưới liên kết */
+        text-decoration: none; /* Bỏ gạch chân */
+        color: #007bff; /* Màu chữ */
+    }
+
+        .create-link:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+
+    .table {
+        width: 80%; /* Chiều rộng bảng */
+        margin: 0 auto; /* Canh giữa bảng */
+        background-color: #fff; /* Nền trắng cho bảng */
+        border-radius: 8px; /* Bo góc cho bảng */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+        overflow: hidden; /* Để bo góc hoạt động */
+    }
+
+        .table thead {
+            background-color: #007bff; /* Màu nền cho đầu bảng */
+            color: white; /* Màu chữ */
+        }
+
+        .table th, .table td {
+            padding: 10px; /* Padding cho các ô */
+            text-align: left; /* Căn trái nội dung */
+        }
+
+        .table img {
+            max-width: 100px; /* Chiều rộng tối đa cho hình ảnh */
+            max-height: 100px; /* Chiều cao tối đa cho hình ảnh */
+            border-radius: 5px; /* Bo góc cho hình ảnh */
+        }
+
+    .action-links a {
+        margin-right: 10px; /* Khoảng cách giữa các liên kết hành động */
+        color: #007bff; /* Màu chữ cho các liên kết */
+        text-decoration: none; /* Bỏ gạch chân */
+    }
+
+        .action-links a:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+</style>
+
+<h1>Wine List</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="create-link" asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.First().Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Origin)
+                @Html.DisplayNameFor(model => model.First().Origin)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Volume)
+                @Html.DisplayNameFor(model => model.First().Volume)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AlcContent)
+                @Html.DisplayNameFor(model => model.First().AlcContent)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.First().Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
+                @Html.DisplayNameFor(model => model.First().Status)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryName)
+                @Html.DisplayNameFor(model => model.First().CategoryName)
             </th>
-            <td>
-                @Html.DisplayNameFor(model => model.ImgUrl)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ImgUrl)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Origin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Volume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlcContent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.CategoryName)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
                 <td>
-                    <img src="@item.ImgUrl" alt="@item.Name" style="max-width: 100px; max-height: 100px;" />
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.WineId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.WineId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.WineId">Delete</a>
-            </td>
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Volume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlcContent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    <img src="@item.ImgUrl" alt="@item.Name" />
+                </td>
+                <td class="action-links">
+                    <a asp-action="Edit" asp-route-id="@item.WineId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.WineId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.WineId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

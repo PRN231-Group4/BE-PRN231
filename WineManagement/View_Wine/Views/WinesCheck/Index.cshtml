@@ -3,79 +3,111 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<a asp-action="Create">Create New</a>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CheckId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RequestId)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.InspectorId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(Model => Model.wineName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CheckDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CheckId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RequestId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InspectorId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.wineName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CheckDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ImageUrl)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CheckId">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.RequestId">Details</a>
-                </td>
-            </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
         }
-    </tbody>
-</table>
+        h1 {
+            color: #343a40;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .table th, .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .btn {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-edit {
+            background-color: #28a745;
+        }
+        .btn-details {
+            background-color: #007bff;
+        }
+        .btn-edit:hover {
+            background-color: #218838;
+        }
+        .btn-details:hover {
+            background-color: #0056b3;
+        }
+        .image-cell img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wine Check Index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.CheckId)</th>
+                <th>@Html.DisplayNameFor(model => model.RequestId)</th>
+                <th>@Html.DisplayNameFor(model => model.InspectorId)</th>
+                <th>@Html.DisplayNameFor(model => model.wineName)</th>
+                <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <th>@Html.DisplayNameFor(model => model.Status)</th>
+                <th>@Html.DisplayNameFor(model => model.CheckDate)</th>
+                <th>@Html.DisplayNameFor(model => model.ImageUrl)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.CheckId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.RequestId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.InspectorId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.wineName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CheckDate)</td>
+                    <td class="image-cell">
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img src="@item.ImageUrl" alt="Wine Image" />
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CheckId" class="btn btn-edit"><i class="fas fa-edit"></i> Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

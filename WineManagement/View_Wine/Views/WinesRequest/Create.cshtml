@@ -15,99 +15,181 @@
     }
 }
 
-<h1>Create</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
 
-<h4>Wine Request</h4>
-<hr />
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="Create" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        h1, h4 {
+            color: #343a40;
+            text-align: center;
+        }
 
-            <div class="form-group">
-                <label asp-for="SupplierId" class="control-label">Supplier</label>
-                <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.SupplierList"></select>
-                <span asp-validation-for="SupplierId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ManagerId" class="control-label">Staff Name</label>
-                <select asp-for="ManagerId" class="form-control" asp-items="ViewBag.StaffList"></select>
-                <span asp-validation-for="ManagerId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RequestDate" class="control-label">Request Date</label>
-                <input asp-for="RequestDate" class="form-control" />
-                <span asp-validation-for="RequestDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label">Description</label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label">Status</label>
-                <select asp-for="Status" class="form-control" asp-items="@(new SelectList(new List<SelectListItem>
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+        .btn {
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+
+        #inputContainer {
+            margin-top: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+            .input-group select,
+            .input-group input {
+                margin-right: 5px;
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Tạo Yêu Cầu Rượu</h1>
+    <h4>Wine Request</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="SupplierId" class="control-label">Supplier</label>
+                    <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.SupplierList"></select>
+                    <span asp-validation-for="SupplierId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ManagerId" class="control-label">Staff Name</label>
+                    <select asp-for="ManagerId" class="form-control" asp-items="ViewBag.StaffList"></select>
+                    <span asp-validation-for="ManagerId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RequestDate" class="control-label">Request Date</label>
+                    <input asp-for="RequestDate" class="form-control" />
+                    <span asp-validation-for="RequestDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label">Status</label>
+                    <select asp-for="Status" class="form-control" asp-items="@(new SelectList(new List<SelectListItem>
                 {
                     new SelectListItem { Value = "Chưa xử lý", Text = "Chưa xử lý" },
                     new SelectListItem { Value = "Đã xử lý", Text = "Đã xử lý" }
                 }, "Value", "Text"))">
-                </select>
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
 
-            <!-- Container cho các input mới -->
-            <div id="inputContainer"></div>
+                <!-- Container cho các input mới -->
+                <div id="inputContainer"></div>
 
-            <!-- Nút để thêm rượu -->
-            <div class="form-group">
-                <button type="button" id="addWineButton" class="btn btn-secondary">Thêm Rượu</button>
-            </div>
+                <!-- Nút để thêm rượu -->
+                <div class="form-group">
+                    <button type="button" id="addWineButton" class="btn btn-secondary"><i class="fas fa-plus"></i> Thêm Rượu</button>
+                </div>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+        <script>
+            let wineIndex = 0; // Khởi tạo chỉ số cho các mục rượu
+
+            document.getElementById('addWineButton').addEventListener('click', function () {
+                const inputContainer = document.getElementById('inputContainer');
+
+                // Tạo một nhóm input mới
+                const inputGroup = document.createElement('div');
+                inputGroup.className = 'input-group';
+
+                // Tạo dropdown cho tên rượu
+                const wineSelect = document.createElement('select');
+                wineSelect.className = 'form-control';
+                wineSelect.name = `WineItems[${wineIndex}].WineId`; // Sử dụng chỉ số để định danh
+                wineSelect.innerHTML = `@Html.Raw(wineOptions)`; // Gán danh sách từ ViewBag
+
+                // Tạo input cho số lượng
+                const quantityInput = document.createElement('input');
+                quantityInput.type = 'number';
+                quantityInput.placeholder = 'Số Lượng';
+                quantityInput.className = 'form-control';
+                quantityInput.name = `WineItems[${wineIndex}].Quantity`; // Sử dụng chỉ số để định danh
+
+                // Thêm các input vào nhóm
+                inputGroup.appendChild(wineSelect);
+                inputGroup.appendChild(quantityInput);
+
+                // Thêm nhóm input vào container
+                inputContainer.appendChild(inputGroup);
+                wineIndex++; // Tăng chỉ số cho lần thêm tiếp theo
+            });
+        </script>
     }
-    <script>
-        let wineIndex = 0; // Khởi tạo chỉ số cho các mục rượu
-
-        document.getElementById('addWineButton').addEventListener('click', function () {
-            const inputContainer = document.getElementById('inputContainer');
-
-            // Tạo một nhóm input mới
-            const inputGroup = document.createElement('div');
-            inputGroup.className = 'input-group mb-2';
-
-            // Tạo dropdown cho tên rượu
-            const wineSelect = document.createElement('select');
-            wineSelect.className = 'form-control';
-            wineSelect.name = `WineItems[${wineIndex}].WineId`; // Sử dụng chỉ số để định danh
-            wineSelect.innerHTML = `@Html.Raw(wineOptions)`; // Gán danh sách từ ViewBag
-
-            // Tạo input cho số lượng
-            const quantityInput = document.createElement('input');
-            quantityInput.type = 'number';
-            quantityInput.placeholder = 'Số Lượng';
-            quantityInput.className = 'form-control';
-            quantityInput.name = `WineItems[${wineIndex}].Quantity`; // Sử dụng chỉ số để định danh
-
-            // Thêm các input vào nhóm
-            inputGroup.appendChild(wineSelect);
-            inputGroup.appendChild(quantityInput);
-
-            // Thêm nhóm input vào container
-            inputContainer.appendChild(inputGroup);
-            wineIndex++; // Tăng chỉ số cho lần thêm tiếp theo
-        });
-    </script>
-}
+</body>
+</html>

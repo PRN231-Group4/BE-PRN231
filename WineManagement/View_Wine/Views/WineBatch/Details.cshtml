@@ -4,47 +4,112 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
 
-<div>
-    <h4>Wine Batch</h4>
+        h1, h4 {
+            color: #343a40;
+            text-align: center;
+        }
 
-    <hr />
-    <dl class="row">
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.BatchNumber)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.BatchNumber)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ImportDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ImportDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ProductionYear)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ProductionYear)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.BatchId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+        .detail-list {
+            margin: 20px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+            .detail-list dt {
+                font-weight: bold;
+                color: #495057;
+            }
+
+            .detail-list dd {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+        .action-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .action-links a {
+                margin: 0 10px;
+                color: #007bff;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .action-links a:hover {
+                    color: #0056b3;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chi Tiết</h1>
+        <div>
+            <h4>Thông Tin Lô Rượu</h4>
+            <hr />
+            <dl class="detail-list">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BatchNumber)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BatchNumber)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ImportDate)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ImportDate)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProductionYear)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ProductionYear)
+                </dd>
+            </dl>
+        </div>
+        <div class="action-links">
+            <a asp-action="Edit" asp-route-id="@Model?.BatchId">Chỉnh Sửa</a> |
+            <a asp-action="Index">Quay lại danh sách</a>
+        </div>
+    </div>
+
+</body>
+</html>
