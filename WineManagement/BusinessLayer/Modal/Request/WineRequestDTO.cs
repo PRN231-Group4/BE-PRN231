@@ -12,7 +12,6 @@ namespace BusinessLayer.Modal.Request
         public int RequestId { get; set; }
         public string? SupplierName { get; set; }
         public string? ManagerName { get; set; }
-        public string? Wine { get; set; }
         public int SupplierId { get; set; }
         public int? ManagerId { get; set; }
         public int? WineId { get; set; }

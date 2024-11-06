@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.OData.Routing.Controllers;
 namespace WineManagement.Controllers
 {
 
-    [Authorize(Roles = "Staff,Manager")]
 
     [Route("odata/[controller]")]
     [ApiController]

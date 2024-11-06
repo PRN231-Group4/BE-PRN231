@@ -3,25 +3,81 @@
     ViewData["Title"] = "Index";
 }
 
+<style>
+    body {
+        background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #333; /* Màu tiêu đề */
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    }
+
+    .create-link {
+        display: block; /* Hiển thị dưới dạng khối */
+        text-align: center; /* Căn giữa */
+        margin-bottom: 20px; /* Khoảng cách dưới liên kết tạo mới */
+        font-weight: bold; /* Làm đậm chữ */
+        color: #007bff; /* Màu chữ cho liên kết */
+        text-decoration: none; /* Bỏ gạch chân */
+    }
+
+    .create-link:hover {
+        text-decoration: underline; /* Gạch chân khi hover */
+    }
+
+    .table {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin: 20px auto; /* Canh giữa */
+        border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    }
+
+    .table th, .table td {
+        padding: 12px; /* Khoảng cách bên trong ô */
+        text-align: left; /* Căn trái nội dung */
+        border-bottom: 1px solid #ddd; /* Đường viền dưới các ô */
+    }
+
+    .table th {
+        background-color: #007bff; /* Màu nền cho tiêu đề bảng */
+        color: white; /* Màu chữ trắng cho tiêu đề bảng */
+    }
+
+    .table tr:hover {
+        background-color: #f1f1f1; /* Màu nền khi hover vào hàng */
+    }
+
+    .action-links a {
+        margin-right: 10px; /* Khoảng cách giữa các liên kết hành động */
+        color: #007bff; /* Màu chữ cho liên kết */
+        text-decoration: none; /* Bỏ gạch chân */
+    }
+
+    .action-links a:hover {
+        text-decoration: underline; /* Gạch chân khi hover */
+    }
+</style>
+
 <h1>Index</h1>
+
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="create-link" asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryId)
+                @Html.DisplayNameFor(model => model.First().CategoryId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.First().Name)
             </th>
-
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.First().Description)
             </th>
-        
-
             <th></th>
         </tr>
     </thead>
@@ -38,13 +94,10 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
-                
-                <td>
-
+                <td class="action-links">
                     <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a>
                     <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
-
                 </td>
             </tr>
         }

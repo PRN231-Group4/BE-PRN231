@@ -4,63 +4,74 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="text-center">Create Wine</h1>
 
-<h4>Wine</h4>
+<h4 class="text-center">Wine Details</h4>
+
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
+    <div class="col-md-8 offset-md-2">
+        <form asp-action="Create" enctype="multipart/form-data" class="wine-form">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
                 <input asp-for="CategoryId" class="form-control" />
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Origin" class="control-label"></label>
                 <input asp-for="Origin" class="form-control" />
                 <span asp-validation-for="Origin" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Volume" class="control-label"></label>
                 <input asp-for="Volume" class="form-control" />
                 <span asp-validation-for="Volume" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="AlcContent" class="control-label"></label>
                 <input asp-for="AlcContent" class="form-control" />
                 <span asp-validation-for="AlcContent" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
                 <input asp-for="Status" class="form-control" />
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Image" class="control-label">Upload Image</label>
                 <input type="file" asp-for="Image" class="form-control" accept="image/*" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group text-center">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-center">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>
 
 @section Scripts {

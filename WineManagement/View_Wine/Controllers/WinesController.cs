@@ -12,6 +12,7 @@ using System.Reflection.Metadata;
 using static System.Net.Mime.MediaTypeNames;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using DataLayer.Enum;
 
 namespace View_Wine.Controllers
 {
@@ -26,14 +27,21 @@ namespace View_Wine.Controllers
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = _baseAddress;
             _cloudinary = cloudinary;
-
         }
 
         [HttpGet]
         public IActionResult Index()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 1)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             List<WineModal> wineList = new List<WineModal>();
-            HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/wine/getallwine").Result;
+            HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/wine/getallwine?$filter=Status eq 'active'").Result;
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 string data = httpResponseMessage.Content.ReadAsStringAsync().Result;
@@ -108,6 +116,9 @@ namespace View_Wine.Controllers
             return View(modal);
         }
 
+
+        
+
         [HttpPost]
         public async Task<IActionResult> Edit(WineModal modal)
         {
@@ -155,6 +166,20 @@ namespace View_Wine.Controllers
             }
             return View();
         }
+       
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            WineModal modal = new WineModal();
+            HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
+            if (respond.IsSuccessStatusCode)
+            {
+                string data = respond.Content.ReadAsStringAsync().Result;
+                modal = JsonConvert.DeserializeObject<WineModal>(data);
+            }
+            return View(modal);
+        }
+
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -169,26 +194,33 @@ namespace View_Wine.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(WineModal modal)
         {
             try
             {
-                HttpResponseMessage responseMessage = _httpClient
-                    .DeleteAsync(_httpClient.BaseAddress + "/wine/updatewine/update/" + id).Result;
+                // Cập nhật trạng thái sản phẩm thành "InActive"
+                modal.Status = WineStatusEnum.InActive.ToString(); // Hoặc giá trị trạng thái mà bạn muốn
+
+                string data = JsonConvert.SerializeObject(modal);
+                StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                // Gọi API để cập nhật trạng thái
+                HttpResponseMessage responseMessage = await _httpClient
+                    .PutAsync(_httpClient.BaseAddress + "/wine/updatewinestatusfailed/update-status/" + modal.WineId, content);
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-
-                    TempData["successMessage"] = "Product Updated";
+                    TempData["successMessage"] = "Product status updated successfully";
                     return RedirectToAction("Index");
                 }
             }
             catch (Exception ex)
             {
                 TempData["errorMessage"] = ex.Message;
-                return View();
+                return View(modal); // Trả lại modal để giữ thông tin
             }
-            return View();
+
+            return View(modal); // Trả lại modal nếu có lỗi
         }
     }
 }

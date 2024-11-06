@@ -8,7 +8,6 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-    [Authorize(Policy = "ManagerOrStaff")]
 
     public class WinesCheckController : Controller
     {

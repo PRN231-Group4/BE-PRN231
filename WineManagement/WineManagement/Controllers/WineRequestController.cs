@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.OData.Routing.Controllers;
 namespace WineManagement.Controllers
 {
     [Route("odata/[controller]")]
-    [Authorize(Roles = "Manager")]
 
     [ApiController]
     public class WineRequestController : ODataController

@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using BusinessLayer.Modal;
 using BusinessLayer.Modal.Request;
 using BusinessLayer.Modal.Response;
 using BusinessLayer.Service.Interface;
+using DataLayer.Enum;
 using DataLayer.Models;
 using DataLayer.Repository.Interface;
 using System;
@@ -35,6 +37,27 @@ namespace BusinessLayer.Service
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }
+        }
+        public async Task<bool> UpdateStatusFailed(int id, WineDTOStatus data)
+        {
+            try
+            {
+                var data1 = await _wineRepo.GetById(id);
+                if (data == null)
+                {
+                    return false;
+                }
+                data.Status = WineStatusEnum.InActive.ToString();
+                _mapper.Map(data, data1);
+                await _wineRepo.Update(data1);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
             }
         }
 
@@ -106,5 +129,7 @@ namespace BusinessLayer.Service
                 return false;
             }
         }
+
+       
     }
 }

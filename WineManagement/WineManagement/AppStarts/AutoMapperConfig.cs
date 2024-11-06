@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BusinessLayer.Modal;
 using BusinessLayer.Modal.Request;
 using BusinessLayer.Modal.Response;
 using DataLayer.Models;
@@ -20,15 +21,24 @@ namespace WineManagement.AppStarts
             CreateMap<CategoryDTO, Category>().ReverseMap();
             CreateMap<RoleDTO, Role>().ReverseMap();
             CreateMap<SupplierDTO, Supplier>().ReverseMap();
-            CreateMap<WineRequest, WineRequestDTO>().ForMember(dest => dest.SupplierName, opt => opt.Ignore())
-                                                    .ForMember(dest => dest.ManagerName, opt => opt.Ignore())
-                                                    .ForMember(dest => dest.Wine, opt => opt.Ignore());
+            // Ánh xạ cho WineRequest
+            CreateMap<WineRequest, WineRequestDTO>()
+                .ForMember(dest => dest.SupplierName, opt => opt.Ignore())
+                .ForMember(dest => dest.ManagerName, opt => opt.Ignore());
 
+            // Ánh xạ cho WineRequestCRUDDTO
             CreateMap<WineRequest, WineRequestCRUDDTO>().ReverseMap();
-            CreateMap<WineCheck, WineCheckDTO>().ReverseMap();
-            CreateMap<Wine, WineCheckDTO>()
-    .ForMember(dest => dest.wineName, opt => opt.MapFrom(src => src.Name)); // Đảm bảo ánh xạ đúng
 
+            // Ánh xạ cho WineCheck
+            CreateMap<WineCheckDTO, WineCheck>();
+            CreateMap<WineCheck, WineCheckDTO>();
+
+
+            // Đảm bảo chỉ lấy `WineId` cho WineCheckDTO, không ánh xạ toàn bộ `Wine`
+            CreateMap<Wine, WineCheckDTO>()
+                .ForMember(dest => dest.wineName, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.WineId, opt => opt.MapFrom(src => src.WineId));
+            CreateMap<Wine, WineDTOStatus>().ReverseMap();
 
 
 

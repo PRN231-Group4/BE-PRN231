@@ -37,46 +37,54 @@ namespace BusinessLayer.Service
 
         public async Task<WineRequestCRUDDTO> Create(WineRequestCRUDDTO data)
         {
+            if (data == null || data.WineItems == null || !data.WineItems.Any())
+            {
+                throw new ArgumentException("Dữ liệu yêu cầu không hợp lệ.");
+            }
+
             try
             {
-                // Ánh xạ từ DTO sang entity WineRequest
                 var wineRequest = _mapper.Map<WineRequest>(data);
-
-                // Tạo WineRequest
                 var wineRequestCreate = await _wineRequestRepo.Create(wineRequest);
 
-                // Duyệt qua từng loại rượu trong danh sách WineItems
                 foreach (var item in data.WineItems)
                 {
-                    // Tạo WineCheck cho từng WineId
+                    var existingWine = await _wineRepository.GetById(item.WineId);
+                    if (existingWine == null)
+                    {
+                        throw new Exception($"Wine với ID = {item.WineId} không tồn tại.");
+                    }
+
                     var wineCheckDto = new WineCheckDTO
                     {
-                        RequestId = wineRequest.RequestId,
-                        CheckDate = wineRequest.RequestDate,
-                        Description = wineRequest.Description,
-                        ImageUrl = "", // Thêm logic cho hình ảnh nếu cần
-                        Status = "Pending", // Hoặc bất kỳ trạng thái nào bạn muốn
-                        InspectorId = wineRequest.ManagerId,
-                        Quantity = item.Quantity, // Sử dụng số lượng từ từng item
-                        WineId = item.WineId // Sử dụng WineId từ từng item
+                        RequestId = wineRequestCreate.RequestId,
+                        CheckDate = wineRequestCreate.RequestDate,
+                        Description = wineRequestCreate.Description,
+                        ImageUrl = "",
+                        Status = "Pending",
+                        InspectorId = wineRequestCreate.ManagerId,
+                        Quantity = item.Quantity,
+                        WineId = item.WineId,
+                        wineName = existingWine.Name // Nếu cần thêm tên rượu
                     };
 
-                    // Tạo WineCheck
                     var wineCheck = _mapper.Map<WineCheck>(wineCheckDto);
-                    await _wineCheckRepository.Create(wineCheck);
+                    await _wineCheckRepository.Create(wineCheck); // Tạo WineCheck
                 }
 
-                // Ánh xạ lại kết quả thành DTO
                 var result = _mapper.Map<WineRequestCRUDDTO>(wineRequestCreate);
-
                 return result;
+            }
+            catch (DbUpdateException dbEx)
+            {
+                throw new Exception("Lỗi cơ sở dữ liệu khi tạo WineRequest và WineCheck: " + dbEx.InnerException?.Message);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu một trong các bước không thành công
                 throw new Exception("Lỗi khi tạo WineRequest và WineCheck: " + ex.Message);
             }
         }
+
 
 
         public async Task<bool> Delete(int id)

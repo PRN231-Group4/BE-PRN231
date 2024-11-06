@@ -1,8 +1,65 @@
-﻿@model DataLayer.Models.Wine
+﻿@model View_Wine.Models.WineModal
 
 @{
     ViewData["Title"] = "Details";
 }
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center; /* Căn giữa tiêu đề */
+    }
+
+    .wine-details {
+        background-color: #fff; /* Nền trắng cho chi tiết rượu */
+        padding: 20px;
+        border-radius: 8px; /* Bo góc cho khung */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+        margin: 20px auto; /* Canh giữa */
+        max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    }
+
+    dl {
+        margin: 0; /* Loại bỏ khoảng cách mặc định */
+    }
+
+    dt {
+        font-weight: bold; /* Đậm tiêu đề */
+    }
+
+    .action-links {
+        text-align: center; /* Căn giữa các liên kết hành động */
+        margin-top: 20px; /* Khoảng cách cho các liên kết */
+    }
+
+    .btn {
+        margin: 0 5px; /* Khoảng cách giữa các nút */
+        text-decoration: none; /* Bỏ gạch chân cho liên kết */
+        padding: 8px 15px; /* Padding cho liên kết */
+        border-radius: 5px; /* Bo góc cho liên kết */
+    }
+
+    .btn-edit {
+        background-color: #007bff; /* Màu nền cho nút Edit */
+        color: white; /* Màu chữ */
+    }
+
+    .btn-back {
+        background-color: #6c757d; /* Màu nền cho nút Back */
+        color: white; /* Màu chữ */
+    }
+
+    .btn:hover {
+        opacity: 0.9; /* Hiệu ứng hover */
+    }
+</style>
+
+
 
 <h1>Details</h1>
 
@@ -47,10 +104,11 @@
             @Html.DisplayFor(model => model.Status)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.ImgUrl)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Category.Name)
+            <img src="model.ImgUrl" alt="model.ImgUrl" style="max-width: 100px; max-height: 100px;" />
+
         </dd>
     </dl>
 </div>

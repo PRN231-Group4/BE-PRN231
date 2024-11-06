@@ -7,6 +7,7 @@ namespace DataLayer.Models
     {
         public Account()
         {
+            Reports = new HashSet<Report>();
             WineChecks = new HashSet<WineCheck>();
             WineRequests = new HashSet<WineRequest>();
             WineTransactions = new HashSet<WineTransaction>();
@@ -19,6 +20,7 @@ namespace DataLayer.Models
         public string? Status { get; set; }
 
         public virtual Role? Role { get; set; }
+        public virtual ICollection<Report> Reports { get; set; }
         public virtual ICollection<WineCheck> WineChecks { get; set; }
         public virtual ICollection<WineRequest> WineRequests { get; set; }
         public virtual ICollection<WineTransaction> WineTransactions { get; set; }
