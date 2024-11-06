@@ -12,6 +12,7 @@ namespace View_Wine.Controllers
 
         public BaseController(IConfiguration configuration)
         {
+
             _httpClient = new HttpClient();
             var contentType = new MediaTypeWithQualityHeaderValue("application/json");
             _httpClient.DefaultRequestHeaders.Accept.Add(contentType);
