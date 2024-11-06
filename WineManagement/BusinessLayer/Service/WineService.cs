@@ -29,6 +29,7 @@ namespace BusinessLayer.Service
         {
             try
             {
+                data.Status = WineStatusEnum.Active.ToString();
                 var map = _mapper.Map<Wine>(data);
                 var dataCreate = await _wineRepo.Create(map);
                 var resutl = _mapper.Map<WineDTORespond>(dataCreate);

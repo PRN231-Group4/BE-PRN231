@@ -85,5 +85,14 @@ namespace View_Wine.Controllers
             return View(model);
         }
 
+        [HttpPost] 
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("authToken");
+            HttpContext.Session.Remove("username");
+            HttpContext.Session.Remove("roleId");
+
+            return RedirectToAction("Index", "Home");
+        }
     }  
 }

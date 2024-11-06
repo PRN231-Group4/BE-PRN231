@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FE_WineManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eed3cb6e1c5d7350f1f309d504624a42fa9ea49b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58395c7523e4cb806a74cd0590a8e6d515118809")]
 [assembly: System.Reflection.AssemblyProductAttribute("FE_WineManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FE_WineManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

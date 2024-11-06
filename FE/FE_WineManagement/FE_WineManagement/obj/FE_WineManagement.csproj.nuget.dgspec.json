@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj": {}
+    "D:\\FPT\\HK8\\PRN_231\\final code\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj": {
+    "D:\\FPT\\HK8\\PRN_231\\final code\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj",
+        "projectUniqueName": "D:\\FPT\\HK8\\PRN_231\\final code\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj",
         "projectName": "FE_WineManagement",
-        "projectPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj",
+        "projectPath": "D:\\FPT\\HK8\\PRN_231\\final code\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\FE_WineManagement.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\HK8\\PRN_231\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\obj\\",
+        "outputPath": "D:\\FPT\\HK8\\PRN_231\\final code\\BE-PRN231\\FE\\FE_WineManagement\\FE_WineManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
