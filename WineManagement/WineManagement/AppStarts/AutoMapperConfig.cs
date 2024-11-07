@@ -44,6 +44,7 @@ namespace WineManagement.AppStarts
 
             CreateMap<Account, UpdateAccountDto>().ReverseMap();
 
+            CreateMap<ReportRequest, Report>().ReverseMap();
 
         }
 
