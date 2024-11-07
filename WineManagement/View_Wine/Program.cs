@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
 using View_Wine.AppStart;
+using View_Wine.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,10 +18,13 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Chỉ cho phép cookie được truy cập qua HTTP
     options.Cookie.IsEssential = true; // Cookie cần thiết cho hoạt động của ứng dụng
 });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5067/") });
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddCloudinary();
 builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<AccountService>();
 //DBcontext
 builder.Services.AddDbContext<WineManagementSystemContext>(options =>
 {
@@ -52,6 +56,9 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Iamnotsurewhattoputinthissection")) 
     };
 });
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 // Cấu hình phân quyền
 builder.Services.AddAuthorization(options =>
@@ -76,8 +83,20 @@ app.UseRouting();
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Login}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "Wines",
+      pattern: "wines",
+      defaults: new { controller = "Wines", action = "Index" });
+
+    endpoints.MapControllerRoute(
+      name: "default",
+      pattern: "{controller=Home}/{action=Index}/{id?}");
+
+});
 
 app.Run();

@@ -40,6 +40,9 @@ namespace WineManagement.AppStarts
                 .ForMember(dest => dest.WineId, opt => opt.MapFrom(src => src.WineId));
             CreateMap<Wine, WineDTOStatus>().ReverseMap();
 
+            CreateMap<UpdateAccountDto, Account>().ReverseMap();
+
+            CreateMap<Account, UpdateAccountDto>().ReverseMap();
 
 
         }

@@ -1,0 +1,13 @@
+﻿#actionIcons {
+    position: absolute; /* Để các icon không bị chồng lên nhau */
+    background: white; /* Nền trắng cho rõ ràng */
+    border: 1px solid #ddd; /* Viền mỏng */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+    z-index: 100; /* Đảm bảo nằm trên các phần tử khác */
+}
+
+    #actionIcons i {
+        font-size: 18px; /* Kích thước biểu tượng */
+        color: #333; /* Màu sắc biểu tượng */
+    }

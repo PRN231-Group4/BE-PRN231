@@ -57,7 +57,7 @@ namespace View_Wine.Controllers
                             switch (userData.Account.RoleId)
                             {
                                 case 1:
-                                    return RedirectToAction("Index", "Wine"); // Chuyển hướng đến trang quản trị
+                                    return RedirectToAction("Index", "Wines"); // Chuyển hướng đến trang quản trị
                                 case 4:
                                     return RedirectToAction("Index", "WineBatch"); // Chuyển hướng đến trang của Manager
                               

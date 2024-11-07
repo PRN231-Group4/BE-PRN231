@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/View_Wine.styles.css" asp-append-version="true" />
+
+    <partial name="P_Styles" />
+    @await RenderSectionAsync(name: "Styles", required: false)
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +35,193 @@
     </style>
 </head>
 <body>
-    <header>
+   @*  <div class="wrapper">
+
+        <div class="main-header">
+            <div class="main-header-logo">
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/img/kaiadmin/logo_light.svg"
+                             alt="navbar brand"
+                             class="navbar-brand"
+                             height="20" />
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <!-- End Logo Header -->
+            </div>
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="submit" class="btn btn-search pe-1">
+                                    <i class="fa fa-search search-icon"></i>
+                                </button>
+                            </div>
+                            <input type="text"
+                                   placeholder="Search ..."
+                                   class="form-control" />
+                        </div>
+                    </nav>
+
+                    <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                        <li class="nav-item topbar-user dropdown hidden-caret">
+                            <form asp-action="Logout" method="post" class="d-inline">
+                                <button type="submit" class="nav-link text-dark" style="background:none; border:none; padding:0;">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+        <div class="sidebar" data-background-color="dark">
+            <div class="sidebar-logo">
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/img/kaiadmin/logo_light.svg"
+                             alt="navbar brand"
+                             class="navbar-brand"
+                             height="20" />
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <div class="main-header">
+                    <!-- Navbar Header -->
+                    <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+                        <div class="container-fluid">
+                            <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button type="submit" class="btn btn-search pe-1">
+                                            <i class="fa fa-search search-icon"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text"
+                                           placeholder="Search ..."
+                                           class="form-control" />
+                                </div>
+                            </nav>
+
+                            <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                                <li class="nav-item topbar-user dropdown hidden-caret">
+                                    <form asp-action="Logout" method="post" class="d-inline">
+                                        <button type="submit" class="nav-link text-dark" style="background:none; border:none; padding:0;">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- End Navbar -->
+                </div>
+                <!-- End Logo Header -->
+            </div>
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse"
+                               href="/"
+                               class="collapsed"
+                               aria-expanded="false">
+                                <i class="fas fa-home"></i>
+                                <p>Bảng người dùng</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Wines" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>Wines</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="WinesRequest" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>WinesRequest</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="WinesCheck" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>WinesCheck</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Role" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>Role</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Supplier" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>Supplier</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Category" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>Category</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Winebatch" asp-action="Index">
+                                <i class="fas fa-home"></i>
+                                <p>Winebatch</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        @RenderBody()
+    </div> *@
+   <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">View_Wine</a>
@@ -45,9 +234,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>   
+                        </li>    
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Wines</a>
                         </li>
@@ -74,6 +263,7 @@
             </div>
         </nav>
     </header>
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -88,6 +278,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <partial name="P_Styles" />
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
