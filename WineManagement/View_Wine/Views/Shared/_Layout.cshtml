@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var isAuthenticated = Context.Session.GetString("authToken") != null; // Kiểm tra session
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,50 +33,80 @@
             .nav-link:hover {
                 text-decoration: underline; /* Hiệu ứng hover cho link */
             }
+
+        .logout-button {
+            background-color: #dc3545; /* Màu đỏ */
+            color: white; /* Màu chữ trắng */
+            border: none; /* Không viền */
+            padding: 10px 15px; /* Khoảng đệm */
+            border-radius: 5px; /* Góc tròn */
+            cursor: pointer; /* Con trỏ khi hover */
+        }
+
+            .logout-button:hover {
+                background-color: #c82333; /* Màu đỏ đậm khi hover */
+            }
+
+        .navbar-nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between; /* Tạo khoảng cách giữa các mục */
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">View_Wine</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>   
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Wines</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="WinesRequest" asp-action="Index">WinesRequest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="WinesCheck" asp-action="Index">WinesCheck</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Role</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="Index">Supplier</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Winebatch" asp-action="Index">Winebatch</a>
-                        </li>
-                    </ul>
+        @if (isAuthenticated) // Kiểm tra session
+        {
+            <nav class="navbar navbar-expand-sm navbar-light bg-white">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">View_Wine</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Wines" asp-action="Index">Wines</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="WinesRequest" asp-action="Index">WinesRequest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="WinesCheck" asp-action="Index">WinesCheck</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Role</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="Index">Supplier</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Winebatch" asp-action="Index">Winebatch</a>
+                            </li>
+                            <li class="nav-item ms-auto">
+                                <!-- Thêm lớp ms-auto để đẩy nút về bên phải -->
+                                <form asp-controller="Login" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="logout-button">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        }
     </header>
     <div class="container">
         <main role="main" class="pb-3">

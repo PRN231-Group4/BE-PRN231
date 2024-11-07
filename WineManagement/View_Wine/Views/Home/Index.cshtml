@@ -3,11 +3,41 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="/Wines">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4" style="font-family: 'Georgia', serif; color: #6f4c3e;">Welcome to Wine Shop</h1>
 </div>
-<form asp-action="Logout" method="post" class="d-inline">
-    <button type="submit" class="nav-link text-dark" style="background:none; border:none; padding:0;">
-        Logout
-    </button>
-</form>
+
+@{
+    var isAuthenticated = Context.Session.GetString("authToken") != null;
+}
+
+@if (!isAuthenticated)
+{
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; position: relative; left: 14px; top: -301px; transition: none; cursor: move;" data-selected="true" data-label-id="0">
+        <form method="get" class="d-inline" action="/">
+            <button type="submit" class="nav-link text-dark" style="background: rgb(111, 76, 62); color: white; border: none; padding: 12px 25px; height: auto; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; transform: translateY(0px);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.2)';">
+                Login
+            </button>
+        </form>
+    </div>
+}
+
+<style>
+    
+    .text-center h1 {
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng cho tiêu đề */
+    }
+
+    .text-center p {
+        margin-bottom: 40px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    a {
+        text-decoration: none; /* Bỏ gạch chân */
+    }
+
+        a:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+</style>

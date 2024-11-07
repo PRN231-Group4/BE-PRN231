@@ -35,13 +35,13 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 1)
+            if (roleId != 2)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");
             }
             List<WineModal> wineList = new List<WineModal>();
-            HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/wine/getallwine?$filter=Status eq 'active'").Result;
+            HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/wine/getallwine?$filter=Status eq 'Active'").Result;
             if (httpResponseMessage.IsSuccessStatusCode)
             {
                 string data = httpResponseMessage.Content.ReadAsStringAsync().Result;
@@ -53,6 +53,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -106,6 +114,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             WineModal modal = new WineModal();
             HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
             if (respond.IsSuccessStatusCode)
@@ -170,6 +186,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             WineModal modal = new WineModal();
             HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
             if (respond.IsSuccessStatusCode)
@@ -183,6 +207,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             WineModal modal = new WineModal();
             HttpResponseMessage respond = _httpClient.GetAsync(_baseAddress + "/wine/getwinebyid/get-by-id/" + id).Result;
             if (respond.IsSuccessStatusCode)
