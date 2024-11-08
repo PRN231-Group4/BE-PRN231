@@ -48,6 +48,8 @@
         });
     });
 
+
+    //View
     $('.edit-account').on('click', function () {
         var accountId = $(this).data('id');
         
@@ -69,6 +71,8 @@
         });
     });
 
+
+    //Update
     $('#saveChanges').on('click', function () {
         var accountId = $('#editAccountId').val();
         var updateData = {
@@ -102,6 +106,7 @@
   
 });
 
+//Xoa1
 function deleteAccount(accountId) {
     if (!accountId || accountId <= 0) {
         alert('ID tài khoản không hợp lệ.');
