@@ -1,44 +1,87 @@
-﻿@model BusinessLayer.Modal.Request.WineRequestDTO
-
+﻿@model List<BusinessLayer.Modal.Request.WineCheckDTO>
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detail";
+    Layout = ViewData["Layout"] as string; // Chỉ đến layout tương ứng
+
 }
+<style>
 
-<h1>Details</h1>
+    .table-responsive {
+        margin: 20px 0;
+    }
 
-<div>
-    <h4>Wine Request</h4>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-    <hr />
-    <dl class="row">
+        .table th, .table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.RequestDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.RequestDate)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.RequestId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+        .table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-striped tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+    }
+</style>
+<h1>Wine Request Details</h1>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Check ID</th>
+                <th>Request ID</th>
+                <th>Staff Name</th>
+                <th>Wine </th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Check Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var wineCheck in Model)
+            {
+                <tr>
+                    <td>@wineCheck.CheckId</td>
+                    <td>@wineCheck.RequestId</td>
+                    <td>@wineCheck.InspectorName</td>
+                    <td>@wineCheck.wineName</td>
+                    <td>@wineCheck.Quantity</td>
+                    <td>@wineCheck.Status</td>
+                    <td>@wineCheck.CheckDate</td> <!-- Định dạng ngày giờ -->
+                    <td>@wineCheck.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No wine checks found.</p>
+}

@@ -7,7 +7,7 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-    public class WineBatchController : Controller
+    public class WineBatchController : BaseController
     {
        Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;

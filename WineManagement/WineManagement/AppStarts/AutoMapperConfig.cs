@@ -32,7 +32,9 @@ namespace WineManagement.AppStarts
             // Ánh xạ cho WineCheck
             CreateMap<WineCheckDTO, WineCheck>();
             CreateMap<WineCheck, WineCheckDTO>();
-
+            CreateMap<WineCheck, WineCheckDTO>()
+            .ForMember(dest => dest.wineName, opt => opt.Ignore())    // Bỏ qua để lấy sau
+            .ForMember(dest => dest.InspectorName, opt => opt.Ignore()); // Bỏ qua để lấy sau
 
             // Đảm bảo chỉ lấy `WineId` cho WineCheckDTO, không ánh xạ toàn bộ `Wine`
             CreateMap<Wine, WineCheckDTO>()

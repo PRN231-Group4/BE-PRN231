@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Modal.Request;
+using BusinessLayer.Modal.Request;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
@@ -57,10 +57,13 @@ namespace View_Wine.Controllers
                             switch (userData.Account.RoleId)
                             {
                                 case 1:
-                                    return RedirectToAction("Index", "Wines"); // Chuyển hướng đến trang quản trị
+
+                                    return RedirectToAction("Index", "WinesCheck"); // Chuyển hướng đến trang quản trị
+
                                 case 4:
-                                    return RedirectToAction("Index", "WineBatch"); // Chuyển hướng đến trang của Manager
-                              
+                                    return RedirectToAction("Index", "WinesRequest"); // Chuyển hướng đến trang của Manager
+                                case 2:
+                                    return RedirectToAction("Index", "Role"); // Chuyển hướng đến trang của Manager
                                 default:
                                     return RedirectToAction("Index", "Home"); // Chuyển hướng đến trang mặc định
                             }

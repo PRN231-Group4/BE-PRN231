@@ -8,8 +8,7 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-
-    public class WinesCheckController : Controller
+    public class WinesCheckController : BaseController
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
@@ -24,6 +23,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 1)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             List<WineCheckModal> wineList = new List<WineCheckModal>();
             HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/winecheck").Result;
             if (httpResponseMessage.IsSuccessStatusCode)
@@ -51,6 +58,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 1)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             try
             {
                 // Lấy chi tiết của WineRequest theo id
@@ -95,6 +110,7 @@ namespace View_Wine.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(WineCheckDTO wineCheckDTO)
         {
+
             if (ModelState.IsValid)
             {
                 try

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +14,7 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-    public class ReportsController : Controller
+    public class ReportsController : BaseController
     {
         Uri _baseAddress = new Uri("http://localhost:5067/api");
         private readonly HttpClient _httpClient;
@@ -28,6 +28,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 1)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             List<ReportModal> wineList = new List<ReportModal>();
             HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/report/getallreport").Result;
             if (httpResponseMessage.IsSuccessStatusCode)
@@ -41,6 +49,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 1)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             return View();
         }
         [HttpPost]

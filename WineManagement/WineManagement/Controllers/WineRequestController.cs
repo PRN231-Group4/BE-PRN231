@@ -158,5 +158,26 @@ namespace WineManagement.Controllers
                 return BadRequest();
             }
         }
+
+        [EnableQuery]
+        //[Authorize(Roles = "Staff")]
+        [HttpGet("get-check-byrequest")]
+        public async Task<IActionResult> GetRequest(int id)
+        {
+            try
+            {
+                var result = await _WineRequestService.GetByIdCheck(id);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

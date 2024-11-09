@@ -1,7 +1,9 @@
-﻿@model IEnumerable<View_Wine.Models.ReportModal>
+@model IEnumerable<View_Wine.Models.ReportModal>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = ViewData["Layout"] as string; // Chỉ đến layout tương ứng
+
 }
 
 <!DOCTYPE html>
@@ -92,4 +94,3 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>

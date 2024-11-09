@@ -13,11 +13,13 @@ namespace BusinessLayer.Modal.Request
         public int? InspectorId { get; set; }
         public int? WineId { get; set; }
         public string? wineName { get; set; }
+        public string? InspectorName { get; set; }
 
         public int? Quantity { get; set; }
         public string? Status { get; set; }
         public DateTime? CheckDate { get; set; }
         public string? Description { get; set; }
         public string? ImageUrl { get; set; }
+
     }
 }

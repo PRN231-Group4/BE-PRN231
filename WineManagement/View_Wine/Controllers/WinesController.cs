@@ -16,7 +16,7 @@ using DataLayer.Enum;
 
 namespace View_Wine.Controllers
 {
-    public class WinesController : Controller
+    public class WinesController : BaseController
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
@@ -35,7 +35,7 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 2)
+            if (roleId != 1)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");
@@ -56,7 +56,7 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 2)
+            if (roleId != 1)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");
@@ -117,7 +117,7 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 2)
+            if (roleId != 1)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");
@@ -189,7 +189,7 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 2)
+            if (roleId != 1)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");
@@ -210,7 +210,7 @@ namespace View_Wine.Controllers
             var roleId = HttpContext.Session.GetInt32("roleId");
 
             // Check if the user has the appropriate role
-            if (roleId != 2)
+            if (roleId != 1)
             {
                 // Optionally, you can redirect to an error page or the home page
                 return RedirectToAction("AccessDenied", "Home");

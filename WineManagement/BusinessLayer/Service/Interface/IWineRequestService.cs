@@ -18,5 +18,7 @@ namespace BusinessLayer.Service.Interface
 
         Task<List<Account>> GetAllStaffAccounts();
 
+        Task<List<WineCheckDTO>> GetByIdCheck(int id);
+
     }
 }

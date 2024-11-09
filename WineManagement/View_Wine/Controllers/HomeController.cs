@@ -8,7 +8,7 @@ using View_Wine.Services;
 
 namespace View_Wine.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
         private readonly AccountService _accountService;
