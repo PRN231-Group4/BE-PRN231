@@ -27,7 +27,13 @@ namespace BusinessLayer.Service
 
 		}
 
-		public async Task<Account> GetAccountByIdAsync(int id)
+        public async Task<IEnumerable<Account>> GetAllAccounts()
+        {
+            return await _unitOfWork.Repository<Account>().GetAll().ToListAsync();
+
+        }
+
+        public async Task<Account> GetAccountByIdAsync(int id)
 		{
 			return await _unitOfWork.Repository<Account>().GetById(id);
 		}
