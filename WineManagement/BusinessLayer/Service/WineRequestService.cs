@@ -164,13 +164,43 @@ namespace BusinessLayer.Service
             return data;
         }
 
-        public async Task<WineRequest> GetById(int id)
+        public async Task<List<WineCheckDTO>> GetByIdCheck(int id)
         {
-            var data = await _wineRequestRepo.GetById(id);
-            return data;
+            var wineChecks = await _wineRequestRepo.GetRequestIdByCheck(id);
+            var wineCheckDTOs = new List<WineCheckDTO>();
+
+            foreach (var wineCheck in wineChecks)
+            {
+                // Ánh xạ từ WineCheck sang WineCheckDTO
+                var dto = _mapper.Map<WineCheckDTO>(wineCheck);
+
+                // Lấy tên rượu và tên inspector
+                dto.wineName = await GetWineNameById(wineCheck.WineId ?? 0); // Đảm bảo WineId không null
+                dto.InspectorName = await GetInspectorNameById(wineCheck.InspectorId ?? 0); // Đảm bảo InspectorId không null
+
+                wineCheckDTOs.Add(dto);
+            }
+
+            return wineCheckDTOs;
+        }
+
+        // Phương thức để lấy tên rượu
+        private async Task<string?> GetWineNameById(int wineId)
+        {
+            var wine = await _wineRepository.GetById(wineId);
+            return wine?.Name; // Trả về tên rượu
+        }
+
+        // Phương thức để lấy tên inspector
+        private async Task<string?> GetInspectorNameById(int inspectorId)
+        {
+            var inspector = await _wineRequestRepo.GetAccountById(inspectorId);
+            return inspector?.Username; // Trả về tên inspector
         }
 
     
+
+
         public async Task<bool> Update(int id, WineRequestCRUDDTO data)
         {
             try
@@ -192,7 +222,11 @@ namespace BusinessLayer.Service
                 return false;
             }
         }
-        
 
+        public async Task<WineRequest> GetById(int id)
+        {
+            var data = await _wineRequestRepo.GetById(id);
+            return data;
+        }
     }
 }

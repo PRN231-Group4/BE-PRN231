@@ -6,7 +6,7 @@ using View_Wine.Models;
 namespace View_Wine.Controllers
 {
 
-    public class SupplierController : Controller
+    public class SupplierController : BaseController
     {
 
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
@@ -21,6 +21,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             List<SupplierModal> suppliers = new List<SupplierModal>();
             HttpResponseMessage httpResponseMessage = _httpClient.GetAsync(_baseAddress + "/supplier").Result;
             if (httpResponseMessage.IsSuccessStatusCode)
@@ -41,6 +49,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             return View();
         }
 
@@ -72,6 +88,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             try
             {
                 // Lấy chi tiết của WineRequest theo id
@@ -148,6 +172,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int id, int ms)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             var response = await _httpClient.GetAsync(_baseAddress + $"/supplier/get-by-id?id={id}");
 
             // Kiểm tra xem yêu cầu có thành công không
@@ -172,6 +204,14 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
+            var roleId = HttpContext.Session.GetInt32("roleId");
+
+            // Check if the user has the appropriate role
+            if (roleId != 2)
+            {
+                // Optionally, you can redirect to an error page or the home page
+                return RedirectToAction("AccessDenied", "Home");
+            }
             var response = await _httpClient.GetAsync(_baseAddress + $"/supplier/get-by-id?id={id}");
 
             // Kiểm tra xem yêu cầu có thành công không

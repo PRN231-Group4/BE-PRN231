@@ -1,0 +1,93 @@
+﻿@{
+    var isAuthenticated = Context.Session.GetString("authToken") != null; // Check session
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - View_Wine</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+    }
+
+    .navbar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+    }
+
+        .nav-link:hover {
+            text-decoration: underline; /* Hiệu ứng hover cho link */
+        }
+
+    .logout-button {
+        background-color: #dc3545; /* Màu đỏ */
+        color: white; /* Màu chữ trắng */
+        border: none; /* Không viền */
+        padding: 10px 15px; /* Khoảng đệm */
+        border-radius: 5px; /* Góc tròn */
+        cursor: pointer; /* Con trỏ khi hover */
+    }
+
+        .logout-button:hover {
+            background-color: #c82333; /* Màu đỏ đậm khi hover */
+        }
+
+    .navbar-nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between; /* Tạo khoảng cách giữa các mục */
+    }
+</style>
+<body>
+    <header>
+        @if (isAuthenticated)
+        {
+            <nav class="navbar navbar-expand-sm navbar-light bg-white">
+               
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="WinesCheck" asp-action="Index">WinesCheck</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Wines" asp-action="Index">Wines</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="WineBatch" asp-action="Index">WineBatch</a></li>
+
+                            <li class="nav-item">
+                                <form asp-controller="Login" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-danger">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+        }
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">&copy; 2024 - View_Wine</div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

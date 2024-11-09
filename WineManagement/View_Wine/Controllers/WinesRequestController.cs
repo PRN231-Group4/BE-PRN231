@@ -11,7 +11,7 @@ using View_Wine.Models;
 namespace View_Wine.Controllers
 {
 
-    public class WinesRequestController : Controller
+    public class WinesRequestController : BaseController
     {
         Uri _baseAddress = new Uri("http://localhost:5067/odata");
         private readonly HttpClient _httpClient;
@@ -264,7 +264,7 @@ namespace View_Wine.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var response = await _httpClient.GetAsync(_baseAddress + $"/winerequest/get-by-id?id={id}");
+            var response = await _httpClient.GetAsync(_baseAddress + $"/winerequest/get-check-byrequest?id={id}");
 
             // Kiểm tra xem yêu cầu có thành công không
             if (!response.IsSuccessStatusCode)
@@ -274,17 +274,16 @@ namespace View_Wine.Controllers
 
             var data = await response.Content.ReadAsStringAsync();
 
-            // Giả sử bạn cần deserialize dữ liệu về WineRequest
-            var wineRequest = JsonConvert.DeserializeObject<WineRequestDTO>(data);
+            // Deserialize dữ liệu về danh sách WineCheckDTO
+            var wineChecks = JsonConvert.DeserializeObject<List<WineCheckDTO>>(data);
 
-            if (wineRequest == null)
+            if (wineChecks == null || !wineChecks.Any())
             {
                 return NotFound();
             }
 
-            return View(wineRequest); // Truyền đối tượng đơn cho view
+            return View(wineChecks); // Truyền danh sách cho view
         }
-
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {

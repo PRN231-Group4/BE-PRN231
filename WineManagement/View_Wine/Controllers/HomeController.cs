@@ -5,7 +5,7 @@ using View_Wine.Models;
 
 namespace View_Wine.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 
