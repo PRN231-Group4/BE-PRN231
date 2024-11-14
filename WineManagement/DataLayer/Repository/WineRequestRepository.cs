@@ -71,5 +71,10 @@ namespace DataLayer.Repository
             await _context.SaveChangesAsync();
             return data;
         }
+        public async Task<List<WineRequest>> GetByUserId(int id)
+        {
+            var data = await _context.WineRequests.Where(x => x.ManagerId.Equals(id)).ToListAsync();
+            return data;
+        }
     }
 }

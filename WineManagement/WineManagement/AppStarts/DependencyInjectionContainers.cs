@@ -48,7 +48,7 @@ namespace WineManagement.AppStarts
             services.AddScoped<IWineCheckService, WineCheckService>();
             services.AddScoped<IReportService, ReportService>();
             services.AddScoped<IReportRepository, ReportRepository>();
-
+            services.AddScoped<IWineExportService, WineExportService>();
 
 
 
@@ -74,6 +74,8 @@ namespace WineManagement.AppStarts
             services.AddScoped<ISupplierRepository, SupplierRepository>();
             services.AddScoped<IWineRequestRepository, WineRequestRepository>();
             services.AddScoped<IWineRequestService, WineRequestService>();
+            services.AddScoped<IWineExportService, WineExportService>();
+
 
 
             // auto mapper

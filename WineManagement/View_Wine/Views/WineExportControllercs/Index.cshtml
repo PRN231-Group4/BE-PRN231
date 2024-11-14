@@ -1,0 +1,155 @@
+﻿@model IEnumerable<BusinessLayer.Modal.Request.WineRequestDTO>
+
+@{
+    ViewData["Title"] = "Index";
+    var roleId = Context.Session.GetInt32("roleId"); // Sử dụng Context để lấy Session
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #343a40;
+            text-align: center;
+        }
+
+        .table-container {
+            margin: 20px 0;
+            overflow-x: auto; /* Để hỗ trợ cho màn hình nhỏ */
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .table th, .table td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .table th {
+                background-color: #007bff;
+                color: white;
+            }
+
+            .table tr:hover {
+                background-color: #f1f1f1;
+            }
+
+        .btn {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-create {
+            background-color: #28a745;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+        }
+
+        .btn-details {
+            background-color: #007bff;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+        }
+
+        .btn-update-success {
+            background-color: #28a745; /* Green for success */
+        }
+
+        .btn-update-failed {
+            background-color: #dc3545; /* Red for failed */
+        }
+
+        .btn:hover {
+            opacity: 0.8; /* Hiệu ứng hover cho các nút */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wine Request List</h1>
+
+    @if (roleId == 4) // Kiểm tra nếu roleId là 4
+    {
+        <p>
+            <a asp-action="Create" class="btn btn-create"><i class="fas fa-plus"></i> Tạo Mới</a>
+        </p>
+    }
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.RequestId)</th>
+                    @if (roleId != 1) // Hide columns if roleId is 2
+                    {
+                        <th>@Html.DisplayNameFor(model => model.ManagerName)</th>
+                    }
+                    <th>@Html.DisplayNameFor(model => model.Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.RequestId)</td>
+                        @if (roleId != 1) // Hide data if roleId is 2
+                        {
+                            <td>@Html.DisplayFor(modelItem => item.ManagerName)</td>
+                        }
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.RequestId" class="btn btn-details"><i class="fas fa-info-circle"></i> Detail</a>
+                            <form asp-action="UpdateStatusSuccessExport" method="post" style="display:inline;">
+                                <input type="hidden" name="RequestId" value="@item.RequestId" />
+                                <button type="submit" class="btn btn-update-success"><i class="fas fa-check"></i> Success</button>
+                            </form>
+                            <form asp-action="UpdateStatusFailedExport" method="post" style="display:inline;">
+                                <input type="hidden" name="RequestId" value="@item.RequestId" />
+                                <button type="submit" class="btn btn-update-failed"><i class="fas fa-times"></i> Failed</button>
+                            </form>
+                            @if (roleId == 1) // show columns if roleId is 1
+                            {
+                                <form asp-action="UpdateStatusCheckedExport" method="post" style="display:inline;">
+                                    <input type="hidden" name="RequestId" value="@item.RequestId" />
+                                    <button type="submit" class="btn btn-update-failed"><i class="fas fa-times"></i> Checked</button>
+                                </form>
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

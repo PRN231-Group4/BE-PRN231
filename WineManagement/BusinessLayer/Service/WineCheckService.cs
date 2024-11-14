@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using DataLayer.Enum;
 using DataLayer.Models;
 using DataLayer.Repository;
 using DataLayer.Repository.Interface;
@@ -113,6 +114,46 @@ namespace BusinessLayer.Service
             catch (Exception ex)
             {
                 // Log the exception
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateStatusPickFailed(int id, WineCheckDTO data)
+        {
+            try
+            {
+                var currentData = await _wineCheckRepository.GetById(id);
+                if (currentData == null || data == null)
+                {
+                    return false;
+                }
+                currentData.Status = WineExportStatus.PickFailed.ToString();
+                await _wineCheckRepository.Update(currentData);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateStatusPickSuccess(int id, WineCheckDTO data)
+        {
+            try
+            {
+                var currentData = await _wineCheckRepository.GetById(id);
+                if (currentData == null || data == null)
+                {
+                    return false;
+                }
+                currentData.Status = WineExportStatus.PickSuccess.ToString();
+                await _wineCheckRepository.Update(currentData);
+                return true;
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine($"Fail to update info {ex.Message}");
                 return false;
             }

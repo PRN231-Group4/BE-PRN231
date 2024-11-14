@@ -8,20 +8,18 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Service.Interface
 {
-    public interface IWineRequestService
+    public interface IWineExportService
     {
         public Task<List<WineRequestDTO>> GetAll();
         public Task<WineRequestCRUDDTO> Create(WineRequestCRUDDTO data);
         Task<bool> Update(int id, WineRequestCRUDDTO data);
         Task<bool> Delete(int id);
         Task<WineRequest> GetById(int id);
-
-        Task<List<Account>> GetAllStaffAccounts();
-        Task<List<WineCheck>> GetDetailByReqId(int id);
-
         Task<List<WineRequest>> GetByUserId(int id);
-
-        Task<List<WineCheckDTO>> GetByIdCheck(int id);
+        Task<List<Account>> GetAllStaffAccounts();
+        Task<bool> UpdateStatusSuccessExport(int id, WineRequestCRUDDTO data);
+        Task<bool> UpdateStatusFailedExport(int id, WineRequestCRUDDTO data);
+        Task<bool> UpdateStatusCheckedExport(int id, WineRequestCRUDDTO data);
 
     }
 }

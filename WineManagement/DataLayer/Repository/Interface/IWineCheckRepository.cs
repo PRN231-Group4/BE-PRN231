@@ -16,6 +16,8 @@ namespace DataLayer.Repository.Interface
             public Task<bool> Delete(WineCheck data);
             public Task<List<WineCheck>> GetByRequest(int id);
             public Task<WineCheck> GetById(int id);
-        
+        public Task<List<WineCheck>> GetByReqId(int id);
+
+
     }
 }

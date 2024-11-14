@@ -14,7 +14,9 @@ namespace BusinessLayer.Service.Interface
             public Task<List<WineCheckDTO>> GetAll();
             public Task<WineCheckDTO> Create(WineCheckDTO data);
             Task<bool> Update(int id, WineCheckDTO data);
-            Task<bool> Delete(int id);
+        Task<bool> UpdateStatusPickSuccess(int id, WineCheckDTO data);
+        Task<bool> UpdateStatusPickFailed(int id, WineCheckDTO data);
+        Task<bool> Delete(int id);
             Task<WineCheck> GetById(int id);
         }
     

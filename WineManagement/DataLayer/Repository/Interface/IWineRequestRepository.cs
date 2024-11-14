@@ -19,7 +19,7 @@ namespace DataLayer.Repository.Interface
         public Task<WineRequest> GetById(int id);
         public Task<List<WineCheck>> GetRequestIdByCheck(int id);
 
-
+        public Task<List<WineRequest>> GetByUserId(int id);
         public Task<List<Account>> GetAllStaffAccounts();
        
     }

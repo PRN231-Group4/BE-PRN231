@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLayer.Modal.Request;
 using BusinessLayer.Service.Interface;
+using DataLayer.Enum;
 using DataLayer.Models;
-using DataLayer.Repository;
 using DataLayer.Repository.Interface;
-using DataLayer.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Service
 {
-    public class WineRequestService : IWineRequestService
+    public class WineExportService : IWineExportService
     {
         private readonly IWineRequestRepository _wineRequestRepo;
         private readonly IWineCheckRepository _wineCheckRepository;
@@ -25,16 +24,18 @@ namespace BusinessLayer.Service
 
         private readonly IMapper _mapper;
 
-
-        public WineRequestService(IWineCheckRepository wineCheckRepository,ISupplierRepository supplierRepository ,IWineRequestRepository wineRequestRepo, IMapper mapper, IWineRepository wineRepository)
+        public WineExportService(IWineRequestRepository wineRequestRepo,
+            IWineCheckRepository wineCheckRepository,
+            ISupplierRepository supplierRepository,
+            IWineRepository wineRepository,
+            IMapper mapper)
         {
             _wineRequestRepo = wineRequestRepo;
-            _mapper = mapper;
+            _wineCheckRepository = wineCheckRepository;
             _supplierRepository = supplierRepository;
             _wineRepository = wineRepository;
-            _wineCheckRepository = wineCheckRepository;
+            _mapper = mapper;
         }
-
         public async Task<WineRequestCRUDDTO> Create(WineRequestCRUDDTO data)
         {
             if (data == null || data.WineItems == null || !data.WineItems.Any())
@@ -147,7 +148,7 @@ namespace BusinessLayer.Service
                         wineRequestDto.ManagerName = "No Manager Assigned";
                     }
 
-                    
+
                 }
 
                 return map;
@@ -164,41 +165,16 @@ namespace BusinessLayer.Service
             return data;
         }
 
-        public async Task<List<WineCheckDTO>> GetByIdCheck(int id)
+        public async Task<WineRequest> GetById(int id)
         {
-            var wineChecks = await _wineRequestRepo.GetRequestIdByCheck(id);
-            var wineCheckDTOs = new List<WineCheckDTO>();
-
-            foreach (var wineCheck in wineChecks)
-            {
-                // Ánh xạ từ WineCheck sang WineCheckDTO
-                var dto = _mapper.Map<WineCheckDTO>(wineCheck);
-
-                // Lấy tên rượu và tên inspector
-                dto.wineName = await GetWineNameById(wineCheck.WineId ?? 0); // Đảm bảo WineId không null
-                dto.InspectorName = await GetInspectorNameById(wineCheck.InspectorId ?? 0); // Đảm bảo InspectorId không null
-
-                wineCheckDTOs.Add(dto);
-            }
-
-            return wineCheckDTOs;
+            var data = await _wineRequestRepo.GetById(id);
+            return data;
         }
-
-        // Phương thức để lấy tên rượu
-        private async Task<string?> GetWineNameById(int wineId)
+        public async Task<List<WineRequest>> GetByUserId(int id)
         {
-            var wine = await _wineRepository.GetById(wineId);
-            return wine?.Name; // Trả về tên rượu
+            var data = await _wineRequestRepo.GetByUserId(id);
+            return data;
         }
-
-        // Phương thức để lấy tên inspector
-        private async Task<string?> GetInspectorNameById(int inspectorId)
-        {
-            var inspector = await _wineRequestRepo.GetAccountById(inspectorId);
-            return inspector?.Username; // Trả về tên inspector
-        }
-
-    
 
 
         public async Task<bool> Update(int id, WineRequestCRUDDTO data)
@@ -223,26 +199,64 @@ namespace BusinessLayer.Service
             }
         }
 
-      
-
-        public async Task<WineRequest> GetById(int id)
+        public async Task<bool> UpdateStatusCheckedExport(int id, WineRequestCRUDDTO data)
         {
-            var data = await _wineRequestRepo.GetById(id);
-            return data;
+            try
+            {
+                var currentData = await _wineRequestRepo.GetById(id);
+                if (currentData == null || data == null)
+                {
+                    return false;
+                }
+                currentData.Status = WineExportStatus.Checked.ToString();
+                await _wineRequestRepo.Update(currentData);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
+            }
         }
 
-        public async Task<List<WineRequest>> GetByUserId(int id)
+        public async Task<bool> UpdateStatusFailedExport(int id, WineRequestCRUDDTO data)
         {
-            var data = await _wineRequestRepo.GetByUserId(id);
-            return data;
+            try
+            {
+                var currentData = await _wineRequestRepo.GetById(id);
+                if (currentData == null || data == null)
+                {
+                    return false;
+                }
+                currentData.Status = WineExportStatus.FailedExport.ToString();
+                await _wineRequestRepo.Update(currentData);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
+            }
         }
 
-        public async Task<List<WineCheck>> GetDetailByReqId(int id)
+        public async Task<bool> UpdateStatusSuccessExport(int id, WineRequestCRUDDTO data)
         {
-            var data = await _wineCheckRepository.GetByReqId(id);
-            return data;
+            try
+            {
+                var currentData = await _wineRequestRepo.GetById(id);
+                if (currentData == null || data == null)
+                {
+                    return false;
+                }
+                currentData.Status = WineExportStatus.SuccessExport.ToString();
+                await _wineRequestRepo.Update(currentData);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Fail to update info {ex.Message}");
+                return false;
+            }
         }
-
-
     }
 }

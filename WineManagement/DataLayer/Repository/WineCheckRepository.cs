@@ -50,13 +50,27 @@ namespace DataLayer.Repository
             var data = await _context.WineChecks.Where(w => w.RequestId == id).ToListAsync();
             return data;
         }
-
+       
         public async Task<WineCheck> Update(WineCheck data)
         {
             _context.Update(data);
             await _context.SaveChangesAsync();
             return data;
         }
+        public async Task<List<WineCheck>> GetByReqId(int id)
+        {
+            try
+            {
+                var data = await _context.WineChecks.Where(x => x.RequestId.Equals(id)).ToListAsync();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+       
     }
 
 }
